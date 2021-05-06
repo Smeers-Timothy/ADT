@@ -23,7 +23,7 @@
 
 typedef struct Escale_t Escale;
 
-Escale* create_stopover(float p_x, float p_y, char *p_name);
+Escale* create_stopover(float p_latitude, float p_longitude, char *p_name);
 
 float get_x(Escale *p_stopover);
 

@@ -14,8 +14,8 @@
 #include "race.h"
 
 struct Escale_t {
-	float s_coordX;
-	float s_coordY;
+	float s_latitude;
+	float s_longitude;
 	float s_bestTime;
 	char *s_name;
 };

@@ -15,14 +15,16 @@
 #include "stopover.h"
 
 struct Escale_t {
-	float s_coordX;
-	float s_coordY;
+	float s_latitude;
+	float s_longitude;
 	float s_bestTime;
 	char *s_name;
 };
 
-Escale* create_stopover(float p_x, float p_y, char *p_name) {
+Escale* create_stopover(float p_latitude, float p_longitude, char *p_name) {
 	assert(p_name != NULL);
+	assert(p_latitude <= 90 && p_latitude >= -90);
+	assert(p_longitude <= 180 && p_longitude >= -180);
 
 	Escale *l_stopover = malloc(sizeof(Escale));
 
@@ -34,8 +36,8 @@ Escale* create_stopover(float p_x, float p_y, char *p_name) {
 	if(l_stopover->s_name == NULL)
 		return (NULL);
 
-	l_stopover->s_coordX = p_x;
-	l_stopover->s_coordY = p_y;
+	l_stopover->s_latitude = p_latitude;
+	l_stopover->s_longitude = p_longitude;
 
 	strcpy(l_stopover->s_name, p_name);
 
@@ -45,12 +47,12 @@ Escale* create_stopover(float p_x, float p_y, char *p_name) {
 float get_x(Escale *p_stopover) {
 	assert(p_stopover != NULL);
 
-	return (p_stopover->s_coordX);
+	return (p_stopover->s_latitude);
 }
 float get_y(Escale *p_stopover) {
 	assert(p_stopover != NULL);
 
-	return (p_stopover->s_coordY);
+	return (p_stopover->s_longitude);
 }
 char* get_name(Escale *p_stopover) {
 	assert(p_stopover != NULL);
@@ -69,10 +71,10 @@ float calculate_range(Escale *p_stopover, Escale *p_secondStopover) {
 	assert(p_secondStopover != NULL);
 
 	float l_range = acos(
-			sin(p_stopover->s_coordX)
-			* sin(p_secondStopover->s_coordX)
-			+ cos(p_stopover->s_coordY)
-			* cos(p_secondStopover->s_coordY));
+			sin(p_stopover->s_latitude)
+			* sin(p_secondStopover->s_latitude)
+			+ cos(p_stopover->s_longitude)
+			* cos(p_secondStopover->s_longitude));
 
 	return (l_range);
 }
