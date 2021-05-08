@@ -16,6 +16,13 @@
 #include "seatest.h"
 #include "stopover.h"
 
+static void test_add_stopover();
+static void test_is_circuit();
+static void test_race_time();
+static void test_fixture();
+static void all_tests();
+int test_list();
+
 static void test_add_stopover() {
 
 	Escale *l_firstStopover;

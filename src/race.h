@@ -103,18 +103,6 @@ Escale* obtain_list_stopover(Course *p_race, Escale *p_stopover);
 Escale* obtain_table_stopover(Course *p_race, int p_position);
 
 /**
- * @fn Escale obtain_list_stopover*(Course*, Escale*)
- * @brief getter of the data of a cell
- *
- * @pre p_race != NULL && p_stopover != NULL
- * @post /
- * @param p_race a pointer to the Course structure
- * @param p_stopover a pointer to the Escale structure
- * @return Escale* l_cell->s_stopover a pointer to the data Escale structure
- */
-Escale* obtain_list_stopover(Course *p_race, Escale *p_stopover);
-
-/**
  * @fn void add_start*(Course**, Escale*)
  * @brief Allows you to add a stopover at the start
  *
