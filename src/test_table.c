@@ -27,35 +27,29 @@ static void test_add_stopover() {
 	Escale *l_firstStopover;
 	Escale *l_secondStopover;
 	Escale *l_thirdStopover;
-	Escale *l_stopover;
 	Course *l_race;
 
 	l_firstStopover = create_stopover(18, 32, "Comblain-la_Tour"); /* @suppress("Avoid magic numbers") */
 	l_secondStopover = create_stopover(-90, 180, "Sart-Tilmant"); /* @suppress("Avoid magic numbers") */
 	l_thirdStopover = create_stopover(-40, 25, "Eupen"); /* @suppress("Avoid magic numbers") */
 	l_race = create_table_race(l_firstStopover, l_secondStopover);
+
 	l_race = add_stopover(l_race, l_thirdStopover, 2);
 
-	l_stopover = obtain_table_stopover(l_race, 0);
-
-	assert_float_equal(get_latitude(l_firstStopover), get_latitude(l_stopover),
-			0);
+	assert_float_equal(get_latitude(l_firstStopover),
+			get_latitude(obtain_table_stopover(l_race, 0)), 0);
 	assert_float_equal(get_longitude(l_firstStopover),
-			get_longitude(l_stopover), 0);
+			get_longitude(obtain_table_stopover(l_race, 0)), 0);
 
-	l_stopover = obtain_table_stopover(l_race, 1);
-
-	assert_float_equal(get_latitude(l_secondStopover), get_latitude(l_stopover),
-			0);
+	assert_float_equal(get_latitude(l_secondStopover),
+			get_latitude(obtain_table_stopover(l_race, 1)), 0);
 	assert_float_equal(get_longitude(l_secondStopover),
-			get_longitude(l_stopover), 0);
+			get_longitude(obtain_table_stopover(l_race, 1)), 0);
 
-	l_stopover = obtain_table_stopover(l_race, 2);
-
-	assert_float_equal(get_latitude(l_thirdStopover), get_latitude(l_stopover),
-			0);
+	assert_float_equal(get_latitude(l_thirdStopover),
+			get_latitude(obtain_table_stopover(l_race, 2)), 0);
 	assert_float_equal(get_longitude(l_thirdStopover),
-			get_longitude(l_stopover), 0);
+			get_longitude(obtain_table_stopover(l_race, 2)), 0);
 
 	free_table_race(l_race);
 }
@@ -70,20 +64,22 @@ static void test_race_time() {
 	l_firstStopover = create_stopover(18, 32, "Comblain-la_Tour"); /* @suppress("Avoid magic numbers") */
 	l_secondStopover = create_stopover(-90, 180, "Sart-Tilmant"); /* @suppress("Avoid magic numbers") */
 	l_thirdStopover = create_stopover(-40, 25, "Eupen"); /* @suppress("Avoid magic numbers") */
-	l_race = create_table_race(l_firstStopover, l_secondStopover);
 
-	l_race = ajouter_escale(l_race, l_thirdStopover, 2);
+	l_race = creer_course(l_firstStopover, l_secondStopover);
+	enregistrer_temps(l_secondStopover, 10); /* @suppress("Avoid magic numbers") */
+	assert_float_equal(10, temps_course(l_race), 0);
 
-	assert_float_equal(get_latitude(l_firstStopover), get_latitude(obtain_table_stopover(l_race, 0)), 0);
-	assert_float_equal(get_longitude(l_firstStopover), get_longitude(obtain_table_stopover(l_race, 0)), 0);
+	enregistrer_temps(l_thirdStopover, 2);
+	ajouter_escale(l_race, l_thirdStopover, 2);
 
-	assert_float_equal(get_latitude(l_secondStopover), get_latitude(obtain_table_stopover(l_race, 1)), 0);
-	assert_float_equal(get_longitude(l_secondStopover), get_longitude(obtain_table_stopover(l_race, 1)), 0);
+	assert_float_equal(12, temps_course(l_race), 0);
 
-	assert_float_equal(get_latitude(l_thirdStopover), get_latitude(obtain_table_stopover(l_race, 2)), 0);
-	assert_float_equal(get_longitude(l_thirdStopover), get_longitude(obtain_table_stopover(l_race, 2)), 0);
+	retirer_escale(l_race, 2);
 
-	free_table_race(l_race);
+	assert_float_equal(10, temps_course(l_race), 0);
+
+	libere_course(l_race);
+
 }
 
 static void test_fixture() {
