@@ -15,12 +15,6 @@
 #ifndef STOPOVER_H_
 #define STOPOVER_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-#include <assert.h>
-
 /**
  * @struct typedef struct Escale_t Escale
  * @brief Structure de donnée contenant les information nécessaire à une Escale

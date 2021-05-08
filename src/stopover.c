@@ -12,6 +12,12 @@
  * l_	Les variables globale à une seule fonction
  */
 
+
+#include <math.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
 #include "stopover.h"
 
 /* STRUCT */

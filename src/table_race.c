@@ -12,7 +12,11 @@
  * l_	Les variables globale à une seule fonction
  */
 
+#include <stdlib.h>
+#include <assert.h>
+
 #include "race.h"
+#include "stopover.h"
 
 /* DEFINE */
 
@@ -35,7 +39,6 @@ static Course* memory_allocation(Course *p_race);
 static Course* right_shift(Course *p_race, unsigned int p_start);
 
 static Course* left_shift(Course *p_race, unsigned int p_start);
-
 
 static Course* memory_allocation(Course *p_race) {
 	assert(p_race != NULL);
@@ -83,7 +86,7 @@ static Course* left_shift(Course *p_race, unsigned int p_start) {
 
 /* DYNAMIC FUNCTION */
 
-Course* create_race(Escale *p_stopover, Escale p_secondStopover) {
+Course* create_table_race(Escale *p_stopover, Escale *p_secondStopover) {
 	assert(p_stopover != NULL);
 	assert(p_secondStopover != NULL);
 
@@ -111,7 +114,7 @@ Course* create_race(Escale *p_stopover, Escale p_secondStopover) {
 
 	l_race->s_sizeBoard = SIZE;
 
-	load_time(p_stopover, 0.0);
+	log_time(p_stopover, 0.0);
 
 	l_race->s_stopover = malloc(sizeof(Escale*) * SIZE);
 
@@ -140,12 +143,12 @@ Course* add_stopover(Course *p_race, Escale *p_stopover, int p_position) {
 	return (p_race);
 }
 
-Course* remove_stopover(Course *p_race, int p_position) {
+Course* remove_table_stopover(Course *p_race, int p_position) {
 	assert(p_race != NULL);
 
 	int l_position;
 
-	l_position = get_stopover(p_race);
+	l_position = get_table_stopover(p_race);
 
 	if (p_position > l_position)
 		return (NULL);
@@ -155,9 +158,10 @@ Course* remove_stopover(Course *p_race, int p_position) {
 	p_race->s_nbrStopover--;
 
 	return (p_race);
+
 }
 
-Escale* obtain_stopover(Course *p_race, int p_position) {
+Escale* obtain_table_stopover(Course *p_race, int p_position) {
 	assert(p_race != NULL);
 
 	Escale *l_header;
@@ -167,7 +171,7 @@ Escale* obtain_stopover(Course *p_race, int p_position) {
 	return (l_header);
 }
 
-void free_race(Course *p_race) {
+void free_table_race(Course *p_race) {
 	assert(p_race != NULL);
 
 	if (p_race->s_stopover != NULL)
@@ -177,14 +181,14 @@ void free_race(Course *p_race) {
 		free(p_race);
 }
 
-unsigned int is_circuit(Course *p_race) {
+unsigned int is_table_circuit(Course *p_race) {
 	assert(p_race != NULL);
 
+	unsigned int l_step;
 	float l_firstLatitude;
 	float l_firstLongitude;
 	float l_secondLatitude;
 	float l_secondLongitude;
-	float l_step;
 
 	l_step = p_race->s_sizeBoard - 1;
 
@@ -201,7 +205,7 @@ unsigned int is_circuit(Course *p_race) {
 	return (1);
 }
 
-float race_time(Course *p_race) {
+float race_table_time(Course *p_race) {
 	assert(p_race != NULL);
 
 	p_race->s_bestTime = 0;
@@ -214,7 +218,7 @@ float race_time(Course *p_race) {
 
 /* GETTERS & SETTERS */
 
-unsigned int get_stopover(Course *p_race) {
+unsigned int get_table_stopover(Course *p_race) {
 	assert(p_race != NULL);
 
 	unsigned int l_number = p_race->s_nbrStopover;

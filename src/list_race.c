@@ -12,7 +12,12 @@
  * l_	Les variables globale à une seule fonction
  */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
 #include "race.h"
+#include "stopover.h"
 
 /* STRUCT */
 
@@ -26,7 +31,7 @@ struct Course_t {
 
 /* DYNAMIC FUNCTION */
 
-Course* create_race(Escale *p_stopover, Escale *p_secondStopover) {
+Course* create_list_race(Escale *p_stopover, Escale *p_secondStopover) {
 	assert(p_stopover != NULL);
 	assert(p_secondStopover != NULL);
 
@@ -40,7 +45,7 @@ Course* create_race(Escale *p_stopover, Escale *p_secondStopover) {
 	return (l_race);
 }
 
-Escale* obtain_stopover(Course *p_race, Escale *p_stopover) { /* @suppress("No return") */
+Escale* obtain_list_stopover(Course *p_race, Escale *p_stopover) { /* @suppress("No return") */
 	assert(p_race != NULL);
 	assert(p_stopover != NULL);
 
@@ -75,6 +80,7 @@ void* add_start(Course **p_race, Escale *p_stopover) { /* @suppress("No return")
 }
 
 void* add_end(Course **p_race, Escale *p_stopover) { /* @suppress("No return") */
+	assert(p_race != NULL);
 	assert(p_stopover != NULL);
 
 	Cell *l_cell;
@@ -102,7 +108,7 @@ void* add_end(Course **p_race, Escale *p_stopover) { /* @suppress("No return") *
 	}
 }
 
-void remove_stopover(Course **p_race, Escale *p_stopover) {
+void remove_list_stopover(Course **p_race, Escale *p_stopover) {
 	assert(p_race != NULL);
 	assert(p_stopover != NULL);
 
@@ -148,7 +154,7 @@ void print_race(Course *p_race) {
 	}
 }
 
-void free_race(Course *p_race) {
+void free_list_race(Course *p_race) {
 	assert(p_race != NULL);
 
 	Cell *l_cell;
@@ -180,7 +186,7 @@ float stopover_race_time(Course *p_race, Escale *p_stopover) { /* @suppress("No 
 	}
 }
 
-float race_time(Course *p_race) {
+float race_list_time(Course *p_race) {
 	assert(p_race != NULL);
 
 	Cell *l_cell;
@@ -190,13 +196,13 @@ float race_time(Course *p_race) {
 	l_time = 0;
 
 	while (l_cell != NULL) {
-		l_time += obtenir_temps(l_cell->s_stopover);
+		l_time += get_best_time(l_cell->s_stopover);
 		l_cell = l_cell->s_next_stopover;
 	}
 	return (l_time);
 }
 
-unsigned int is_circuit(Course *p_race) {
+unsigned int is_list_circuit(Course *p_race) {
 	assert(p_race != NULL);
 
 	Escale *l_start;
@@ -220,7 +226,7 @@ unsigned int is_circuit(Course *p_race) {
 
 /* GETTERS & SETTERS */
 
-unsigned int get_stopover(Course *p_race) {
+unsigned int get_list_stopover(Course *p_race) {
 	assert(p_race != NULL);
 
 	unsigned int l_number;
