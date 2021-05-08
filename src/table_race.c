@@ -12,50 +12,234 @@
  * l_	Les variables globale à une seule fonction
  */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
-#include <assert.h>
-
 #include "race.h"
-#include "stopover.h"
 
-struct Course_t{
-    Escale *s_stopover;
-    float s_coordY;
-    float s_bestTime;
-    char *s_name;
+/* DEFINE */
+
+#define REALLOC 2
+#define SIZE 10
+
+/* STRUCT */
+
+struct Course_t {
+	Escale **s_stopover;
+	float s_bestTime;
+	unsigned int s_sizeBoard;
+	unsigned int s_nbrStopover;
 };
 
-Course *create_race(Escale *p_stopover, Escale *p_secondStopover){
+/* STATIC FUNCTION */
 
-    return ;
+static Course* memory_allocation(Course *p_race);
+
+static Course* right_shift(Course *p_race, unsigned int p_start);
+
+static Course* left_shift(Course *p_race, unsigned int p_start);
+
+
+static Course* memory_allocation(Course *p_race) {
+	assert(p_race != NULL);
+
+	unsigned int l_newSize;
+
+	p_race->s_sizeBoard *= REALLOC;
+	l_newSize = p_race->s_sizeBoard * sizeof(Escale*);
+
+	p_race->s_stopover = realloc(p_race->s_stopover, l_newSize);
+
+	return (p_race);
 }
-int is_circuit(Course *p_race){
 
-    return;
+static Course* right_shift(Course *p_race, unsigned int p_start) {
+	assert(p_race != NULL);
+
+	unsigned int l_step;
+
+	if (p_race->s_nbrStopover > 0)
+		l_step = p_race->s_nbrStopover - 1;
+
+	if (p_race->s_sizeBoard < p_race->s_nbrStopover)
+		p_race = memory_allocation(p_race);
+
+	for (unsigned int i = l_step; i >= p_start; i--)
+		p_race->s_stopover[i + 1] = p_race->s_stopover[i];
+
+	return (p_race);
 }
-int number_stopover(Course *p_race){
 
-    return;
+static Course* left_shift(Course *p_race, unsigned int p_start) {
+	assert(p_race != NULL);
+
+	unsigned int l_step;
+
+	if (p_race->s_nbrStopover > 0)
+		l_step = p_race->s_nbrStopover - 1;
+
+	for (unsigned int i = p_start; i < l_step; i++)
+		p_race->s_stopover[i] = p_race->s_stopover[i + 1];
+
+	return (p_race);
 }
-int number_steps(Course *p_race){
 
-    return;
+/* DYNAMIC FUNCTION */
+
+Course* create_race(Escale *p_stopover, Escale p_secondStopover) {
+	assert(p_stopover != NULL);
+	assert(p_secondStopover != NULL);
+
+	float l_firstLatitude;
+	float l_firstLongitude;
+	float l_secondLatitude;
+	float l_secondLongitude;
+	Course *l_race;
+
+	l_firstLatitude = get_latitude(p_stopover);
+	l_firstLongitude = get_longitude(p_stopover);
+	l_secondLatitude = get_latitude(p_secondStopover);
+	l_secondLongitude = get_longitude(p_secondStopover);
+
+	if (l_firstLatitude < l_secondLatitude
+			&& l_firstLongitude < l_secondLongitude
+			&& l_firstLatitude > l_secondLatitude
+			&& l_firstLongitude > l_secondLongitude)
+		return (NULL);
+
+	l_race = malloc(sizeof(Course));
+
+	if (l_race == NULL)
+		return (NULL);
+
+	l_race->s_sizeBoard = SIZE;
+
+	load_time(p_stopover, 0.0);
+
+	l_race->s_stopover = malloc(sizeof(Escale*) * SIZE);
+
+	if (l_race->s_stopover == NULL) {
+		free(l_race);
+		return (NULL);
+	}
+
+	l_race->s_bestTime = 0;
+	l_race->s_stopover[0] = p_stopover;
+	l_race->s_stopover[1] = p_secondStopover;
+
+	return (l_race);
 }
-float best_time_race(Course *p_race){
 
-    return;
+Course* add_stopover(Course *p_race, Escale *p_stopover, int p_position) {
+	assert(p_race != NULL);
+	assert(p_stopover != NULL);
+
+	right_shift(p_race, p_position);
+
+	p_race->s_stopover[p_position] = p_stopover;
+	p_race->s_sizeBoard += 1;
+	p_race->s_nbrStopover++;
+
+	return (p_race);
 }
-float best_time_stopovers_race(Course *p_race, Escale *p_stopover){
 
-    return;
+Course* remove_stopover(Course *p_race, int p_position) {
+	assert(p_race != NULL);
+
+	int l_position;
+
+	l_position = get_stopover(p_race);
+
+	if (p_position > l_position)
+		return (NULL);
+
+	free_stopover(p_race->s_stopover[p_position]);
+	left_shift(p_race, p_position);
+	p_race->s_nbrStopover--;
+
+	return (p_race);
 }
-Course *add_stopover(Course *p_race, Escale *p_stopover){
 
-    return;
+Escale* obtain_stopover(Course *p_race, int p_position) {
+	assert(p_race != NULL);
+
+	Escale *l_header;
+
+	l_header = p_race->s_stopover[p_position];
+
+	return (l_header);
 }
-Course *remove_stopover(Course *p_race, Escale *p_stopover){
 
-    return;
+void free_race(Course *p_race) {
+	assert(p_race != NULL);
+
+	if (p_race->s_stopover != NULL)
+		free(p_race->s_stopover);
+
+	if (p_race != NULL)
+		free(p_race);
+}
+
+unsigned int is_circuit(Course *p_race) {
+	assert(p_race != NULL);
+
+	float l_firstLatitude;
+	float l_firstLongitude;
+	float l_secondLatitude;
+	float l_secondLongitude;
+	float l_step;
+
+	l_step = p_race->s_sizeBoard - 1;
+
+	l_firstLatitude = get_latitude(p_race->s_stopover[0]);
+	l_secondLatitude = get_latitude(p_race->s_stopover[l_step]);
+	l_firstLongitude = get_longitude(p_race->s_stopover[0]);
+	l_secondLongitude = get_longitude(p_race->s_stopover[l_step]);
+
+	if (l_firstLatitude < l_secondLatitude && l_firstLatitude > l_secondLatitude
+			&& l_firstLongitude < l_secondLongitude
+			&& l_firstLongitude > l_secondLongitude)
+		return (0);
+
+	return (1);
+}
+
+float race_time(Course *p_race) {
+	assert(p_race != NULL);
+
+	p_race->s_bestTime = 0;
+
+	for (unsigned int i = 0; i < p_race->s_nbrStopover; i++)
+		p_race->s_bestTime += get_best_time(p_race->s_stopover[i]);
+
+	return (p_race->s_bestTime);
+}
+
+/* GETTERS & SETTERS */
+
+unsigned int get_stopover(Course *p_race) {
+	assert(p_race != NULL);
+
+	unsigned int l_number = p_race->s_nbrStopover;
+
+	return (l_number);
+}
+
+unsigned int get_step(Course *p_race) {
+	assert(p_race != NULL);
+
+	unsigned int l_step = p_race->s_nbrStopover;
+
+	if (l_step > 0)
+		l_step -= 1;
+
+	return (l_step);
+}
+
+float get_time(Course *p_race, int p_position) {
+	assert(p_race != NULL);
+	assert(p_position < p_race->s_nbrStopover);
+
+	float l_time;
+
+	l_time = get_best_time(p_race->s_stopover[p_position]);
+
+	return (l_time);
 }

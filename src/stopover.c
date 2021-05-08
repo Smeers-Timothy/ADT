@@ -44,12 +44,12 @@ Escale* create_stopover(float p_latitude, float p_longitude, char *p_name) {
 	return (l_stopover);
 }
 
-float get_x(Escale *p_stopover) {
+float get_latitude(Escale *p_stopover) {
 	assert(p_stopover != NULL);
 
 	return (p_stopover->s_latitude);
 }
-float get_y(Escale *p_stopover) {
+float get_longitude(Escale *p_stopover) {
 	assert(p_stopover != NULL);
 
 	return (p_stopover->s_longitude);
@@ -60,7 +60,7 @@ char* get_name(Escale *p_stopover) {
 	return (p_stopover->s_name);
 }
 
-float get_time(Escale *p_stopover) {
+float get_best_time(Escale *p_stopover) {
 	assert(p_stopover != NULL);
 
 	return (p_stopover->s_bestTime);
@@ -74,7 +74,8 @@ float calculate_range(Escale *p_stopover, Escale *p_secondStopover) {
 			sin(p_stopover->s_latitude)
 			* sin(p_secondStopover->s_latitude)
 			+ cos(p_stopover->s_longitude)
-			* cos(p_secondStopover->s_longitude));
+			* cos(p_secondStopover->s_longitude)
+			* 1000);
 
 	return (l_range);
 }
@@ -88,8 +89,8 @@ Escale* log_time(Escale *p_stopover, float p_time) {
 }
 
 void free_stopover(Escale *p_stopover) {
-	assert(p_stopover != NULL)
+	assert(p_stopover != NULL);
+
 	free(p_stopover->s_name);
 	free(p_stopover);
 }
-

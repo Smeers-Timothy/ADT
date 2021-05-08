@@ -31,7 +31,7 @@ float get_y(Escale *p_stopover);
 
 char* get_name(Escale *p_stopover);
 
-float get_time(Escale *p_stopover);
+float get_best_time(Escale *p_stopover);
 
 float calculate_range(Escale *p_stopover, Escale *p_secondStopover);
 
