@@ -8,30 +8,30 @@ LDFLAGS=
 DOXYGEN=DOXYGEN
 
 # Files #
-EXEC=escale.o course_liste.o course_tableau.o
-TESTS=test_tableau test_liste
-TESTS_E=course_tableau_test course_liste_test
-MODULES=escale.c course_liste.c
-OBJECTS=escale.o course_liste.o
+EXEC=stopover.o list_race.o table_race.o
+TESTS=test_table test_list
+TESTS_E=test_table test_list
+MODULES=stopover.c list_race.c
+OBJECTS=stopover.o list_race.o
 
 ## Rules ## 
 
 all: $(EXEC)
 
-escale.o: escale.c
-	$(CC) -c escale.c -o escale.o $(CFLAGS)
+stopover.o: stopover.c
+	$(CC) -c stopover.c -o stopover.o $(CFLAGS)
 
-course_liste.o: course_liste.c
-	$(CC) -c course_liste.c -o course_liste.o $(CFLAGS)
+list_race.o: list_race.c
+	$(CC) -c list_race.c -o list_race.o $(CFLAGS)
 
-course_tableau.o: course_tableau.c
-	$(CC) -c course_tableau.c -o course_tableau.o $(CFLAGS)
+table_race.o: table_race.c
+	$(CC) -c table_race.c -o table_race.o $(CFLAGS)
 
-test_tableau: course_tableau_test.c
-	$(CC) -g -o course_tableau_test escale.c course_tableau.c seatest.c course_tableau_test.c $(CFLAGS)
+test_table: test_table.c
+	$(CC) -g -o test_table stopover.c table_race.c seatest.c test_table.c $(CFLAGS)
 
-test_liste: course_liste_test.c
-	$(CC) -g -o course_liste_test escale.c course_liste.c seatest.c course_liste_test.c $(CFLAGS)
+test_list: test_list.c
+	$(CC) -g -o test_list stopover.c list_race.c seatest.c test_list.c $(CFLAGS)
 
 clean:
 	rm -f *.o $(TESTS_E) *~
