@@ -12,7 +12,7 @@ static void test_add_stopover() {
 
 
 	l_firstStopover = create_stopover(10, 10, "Liege");
-	l_secondStopover = create_stopover(55555.55, 4444, "Bruxelles");
+	l_secondStopover = create_stopover(-90, 90, "Bruxelles");
 	l_thirdStopover = create_stopover(25, 25, "Namur");
 	l_race = create_list_race(l_firstStopover, l_secondStopover);
 	add_end(&l_race, l_thirdStopover);
@@ -55,7 +55,7 @@ static void test_is_circuit() {
 	Course *l_race;
 
 	l_firstStopover = create_stopover(10, 10, "Liege");
-	l_secondStopover = create_stopover(55555.55, 4444, "Bruxelles");
+	l_secondStopover = create_stopover(-90, 90, "Bruxelles");
 	l_thirdStopover = create_stopover(25, 25, "Namur");
 	l_race = create_list_race(l_firstStopover, l_secondStopover);
 
@@ -81,7 +81,7 @@ static void test_race_time() {
 	Course *l_race;
 
 	l_firstStopover = create_stopover(10, 10, "Liege");
-	l_secondStopover = create_stopover(55555.55, 4444, "Bruxelles");
+	l_secondStopover = create_stopover(-90, 90, "Bruxelles");
 	l_thirdStopover = create_stopover(25, 25, "Namur");
 	l_race = create_list_race(l_firstStopover, l_secondStopover);
 

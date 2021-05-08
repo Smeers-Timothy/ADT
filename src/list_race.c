@@ -233,6 +233,7 @@ unsigned int get_list_stopover(Course *p_race) {
 	Cell *l_cell;
 
 	l_cell = p_race->s_next_stopover;
+	l_number = 0;
 
 	while (l_cell != NULL) {
 		l_cell = l_cell->s_next_stopover;

@@ -14,7 +14,7 @@ TESTS_E=test_table test_list
 MODULES=stopover.c list_race.c
 OBJECTS=stopover.o list_race.o
 
-## Rules ## 
+## Rules ##
 
 all: $(EXEC)
 
