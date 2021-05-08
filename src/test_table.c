@@ -81,7 +81,7 @@ static void test_race_time() {
 	assert_float_equal(get_longitude(l_secondStopover), get_longitude(obtain_table_stopover(l_race, 1)), 0);
 
 	assert_float_equal(get_latitude(l_thirdStopover), get_latitude(obtain_table_stopover(l_race, 2)), 0);
-	assert_float_equal(get_longitude(l_thirdStopover), obtenget_longitudeir_y(obtain_table_stopover(l_race, 2)), 0);
+	assert_float_equal(get_longitude(l_thirdStopover), get_longitude(obtain_table_stopover(l_race, 2)), 0);
 
 	free_table_race(l_race);
 }
