@@ -14,12 +14,16 @@
 
 #include "stopover.h"
 
+/* STRUCT */
+
 struct Escale_t {
 	float s_latitude;
 	float s_longitude;
 	float s_bestTime;
 	char *s_name;
 };
+
+/* DYNAMIC FUNCTION */
 
 Escale* create_stopover(float p_latitude, float p_longitude, char *p_name) {
 	assert(p_name != NULL);
@@ -33,7 +37,7 @@ Escale* create_stopover(float p_latitude, float p_longitude, char *p_name) {
 
 	l_stopover->s_name = malloc(sizeof(char) * sizeof(p_name));
 
-	if(l_stopover->s_name == NULL)
+	if (l_stopover->s_name == NULL)
 		return (NULL);
 
 	l_stopover->s_latitude = p_latitude;
@@ -44,41 +48,6 @@ Escale* create_stopover(float p_latitude, float p_longitude, char *p_name) {
 	return (l_stopover);
 }
 
-float get_latitude(Escale *p_stopover) {
-	assert(p_stopover != NULL);
-
-	return (p_stopover->s_latitude);
-}
-float get_longitude(Escale *p_stopover) {
-	assert(p_stopover != NULL);
-
-	return (p_stopover->s_longitude);
-}
-char* get_name(Escale *p_stopover) {
-	assert(p_stopover != NULL);
-
-	return (p_stopover->s_name);
-}
-
-float get_best_time(Escale *p_stopover) {
-	assert(p_stopover != NULL);
-
-	return (p_stopover->s_bestTime);
-}
-
-float calculate_range(Escale *p_stopover, Escale *p_secondStopover) {
-	assert(p_stopover != NULL);
-	assert(p_secondStopover != NULL);
-
-	float l_range = acos(
-			sin(p_stopover->s_latitude)
-			* sin(p_secondStopover->s_latitude)
-			+ cos(p_stopover->s_longitude)
-			* cos(p_secondStopover->s_longitude)
-			* 1000);
-
-	return (l_range);
-}
 Escale* log_time(Escale *p_stopover, float p_time) {
 	assert(p_stopover != NULL);
 	assert(p_time >= 0);
@@ -93,4 +62,41 @@ void free_stopover(Escale *p_stopover) {
 
 	free(p_stopover->s_name);
 	free(p_stopover);
+}
+
+float calculate_range(Escale *p_stopover, Escale *p_secondStopover) {
+	assert(p_stopover != NULL);
+	assert(p_secondStopover != NULL);
+
+	float l_range = acos(
+			sin(p_stopover->s_latitude) * sin(p_secondStopover->s_latitude)
+					+ cos(p_stopover->s_longitude)
+							* cos(p_secondStopover->s_longitude) * 1000);
+
+	return (l_range);
+}
+
+/* GETTERS & SETTERS */
+
+char* get_name(Escale *p_stopover) {
+	assert(p_stopover != NULL);
+
+	return (p_stopover->s_name);
+}
+
+float get_latitude(Escale *p_stopover) {
+	assert(p_stopover != NULL);
+
+	return (p_stopover->s_latitude);
+}
+float get_longitude(Escale *p_stopover) {
+	assert(p_stopover != NULL);
+
+	return (p_stopover->s_longitude);
+}
+
+float get_best_time(Escale *p_stopover) {
+	assert(p_stopover != NULL);
+
+	return (p_stopover->s_bestTime);
 }
