@@ -28,7 +28,7 @@ static void test_add_stopover() {
 	l_secondStopover = create_stopover(-90, 180, "Sart-Tilmant"); /* @suppress("Avoid magic numbers") */
 	l_thirdStopover = create_stopover(-40, 25, "Eupen"); /* @suppress("Avoid magic numbers") */
 	l_race = create_table_race(l_firstStopover, l_secondStopover);
-	l_race = ajouter_escale(l_race, l_thirdStopover, 2);
+	l_race = add_stopover(l_race, l_thirdStopover, 2);
 
 
 	l_stopover = obtain_table_stopover(l_race, 0);
@@ -93,7 +93,7 @@ static void all_tests() {
 	test_fixture();
 }
 
-int main() {
+int test_table() {
 
 	return (run_tests(all_tests));
 }

@@ -124,6 +124,6 @@ static void all_tests() {
 	test_fixture();
 }
 
-int main() {
+int test_list() {
 	return (run_tests(all_tests));
 }
