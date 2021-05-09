@@ -86,7 +86,6 @@ void* add_end(Course **p_race, Escale *p_stopover) { /* @suppress("No return") *
 	Cell *l_cell;
 	Cell *l_lastCell;
 
-	l_lastCell = *p_race;
 	l_cell = malloc(sizeof(Cell));
 
 	if (l_cell == NULL)
@@ -100,6 +99,8 @@ void* add_end(Course **p_race, Escale *p_stopover) { /* @suppress("No return") *
 		l_cell->s_nbrStopover = 1;
 
 	} else {
+
+		l_lastCell = *p_race;
 
 		while (l_lastCell->s_next_stopover != NULL)
 			l_lastCell = l_lastCell->s_next_stopover;
@@ -166,6 +167,36 @@ void free_list_race(Course *p_race) {
 	}
 }
 
+void *add_list_stopover(Course **p_race, Escale *p_stopover, int p_position) { /* @suppress("No return") */
+	assert(p_race != NULL);
+	assert(p_stopover != NULL);
+
+	int l_count;
+	Cell *l_newCell;
+	Cell *l_cell;
+
+	l_newCell = (Cell *) malloc(sizeof(Cell));
+
+	if(l_newCell == NULL)
+		l_count = 100; /* @suppress("Avoid magic numbers") */
+
+	else {
+		l_newCell->s_stopover = p_stopover;
+		l_newCell->s_next_stopover = NULL;
+
+		l_cell = *p_race;
+
+		for(unsigned int l_count = 2; l_count <= p_position && l_cell != NULL; l_count++)
+			l_cell = l_cell->s_next_stopover;
+
+		if(l_cell != NULL) {
+			l_newCell->s_next_stopover = l_cell->s_next_stopover;
+
+			l_cell->s_next_stopover = l_newCell;
+		}
+	}
+}
+
 float stopover_race_time(Course *p_race, Escale *p_stopover) { /* @suppress("No return") */
 	assert(p_race != NULL);
 	assert(p_stopover != NULL);
@@ -177,10 +208,10 @@ float stopover_race_time(Course *p_race, Escale *p_stopover) { /* @suppress("No 
 
 	while (l_cell != NULL) {
 
-		l_time = get_best_time(l_cell->s_stopover);
-
-		if (l_cell->s_stopover == p_stopover)
+		if (l_cell->s_stopover == p_stopover) {
+			l_time = get_best_time(l_cell->s_stopover);
 			return (l_time);
+		}
 
 		l_cell = l_cell->s_next_stopover;
 	}
@@ -232,7 +263,7 @@ unsigned int get_list_stopover(Course *p_race) {
 	unsigned int l_number;
 	Cell *l_cell;
 
-	l_cell = p_race->s_next_stopover;
+	l_cell = p_race;
 	l_number = 0;
 
 	while (l_cell != NULL) {

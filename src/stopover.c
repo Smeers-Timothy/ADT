@@ -12,7 +12,6 @@
  * l_	Les variables globale à une seule fonction
  */
 
-
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
@@ -35,6 +34,7 @@ Escale* create_stopover(float p_latitude, float p_longitude, char *p_name) {
 	assert(p_name != NULL);
 	assert(p_latitude <= 90 && p_latitude >= -90);
 	assert(p_longitude <= 180 && p_longitude >= -180);
+
 
 	Escale *l_stopover = malloc(sizeof(Escale));
 

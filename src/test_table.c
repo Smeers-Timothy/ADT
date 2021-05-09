@@ -34,7 +34,7 @@ static void test_add_stopover() {
 	l_thirdStopover = create_stopover(-40, 25, "Eupen"); /* @suppress("Avoid magic numbers") */
 	l_race = create_table_race(l_firstStopover, l_secondStopover);
 
-	l_race = add_stopover(l_race, l_thirdStopover, 2);
+	l_race = add_table_stopover(l_race, l_thirdStopover, 2);
 
 	assert_float_equal(get_latitude(l_firstStopover),
 			get_latitude(obtain_table_stopover(l_race, 0)), 0);

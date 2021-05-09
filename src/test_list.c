@@ -21,7 +21,7 @@ static void test_is_circuit();
 static void test_race_time();
 static void test_fixture();
 static void all_tests();
-int test_list();
+int main();
 
 static void test_add_stopover() {
 
@@ -109,9 +109,11 @@ static void test_race_time() {
 
 	assert_float_equal(10, stopover_race_time(l_race, l_secondStopover), 0);
 	assert_float_equal(17, stopover_race_time(l_race, l_thirdStopover), 0);
+
 	assert_float_equal(27, race_list_time(l_race), 0);
 
 	add_end(&l_race, l_thirdStopover);
+
 	assert_float_equal(44, race_list_time(l_race), 0);
 
 	free_list_race(l_race);
@@ -128,9 +130,11 @@ static void test_fixture() {
 }
 
 static void all_tests() {
+
 	test_fixture();
 }
 
-int test_list() {
+int main() {
+
 	return (run_tests(all_tests));
 }

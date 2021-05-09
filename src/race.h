@@ -63,7 +63,7 @@ Course* create_table_race(Escale *p_stopover, Escale *p_secondStopover);
 Course* remove_table_stopover(Course *p_race, int p_position);
 
 /**
- * @fn Course add_stopover*(Course*, Escale*, int)
+ * @fn Course add_table_stopover*(Course*, Escale*, int)
  * @brief Allows you to add a stopover to the structure
  *
  * @pre p_race != NULL && p_stopover != NULL && p_position > 0
@@ -74,7 +74,7 @@ Course* remove_table_stopover(Course *p_race, int p_position);
  * @return Course * a pointer to the header of the course structure
  * 			NULL on error
  */
-Course* add_stopover(Course *p_race, Escale *p_stopover, int p_position);
+Course* add_table_stopover(Course *p_race, Escale *p_stopover, int p_position);
 
 /**
  * @fn Escale obtain_list_stopover*(Course*, Escale*)
@@ -123,6 +123,18 @@ void* add_start(Course **p_race, Escale *p_stopover);
  * @param p_stopover a pointer to the Escale structure
  */
 void* add_end(Course **p_race, Escale *p_stopover);
+
+/**
+ * @fn void add_list_stopover*(Course**, Escale*, int)
+ * @brief Allows you to add a stopover to the structure
+ *
+ * @pre p_race != NULL && p_stopover != NULL
+ * @post a stopover has been added
+ * @param p_race a pointer to the Course structure
+ * @param p_stopover a pointer to the Escale structure
+ * @param p_position the position in the list
+ */
+void *add_list_stopover(Course **p_race, Escale *p_stopover, int p_position);
 
 /**
  * @fn void print_race(Course*)

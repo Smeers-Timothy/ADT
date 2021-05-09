@@ -130,7 +130,7 @@ Course* create_table_race(Escale *p_stopover, Escale *p_secondStopover) {
 	return (l_race);
 }
 
-Course* add_stopover(Course *p_race, Escale *p_stopover, int p_position) {
+Course* add_table_stopover(Course *p_race, Escale *p_stopover, int p_position) {
 	assert(p_race != NULL);
 	assert(p_stopover != NULL);
 
