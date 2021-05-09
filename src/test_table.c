@@ -17,6 +17,7 @@
 #include "race.h"
 
 static void test_add_stopover();
+static void test_is_circuit();
 static void test_race_time();
 static void test_fixture();
 static void all_tests();
@@ -61,6 +62,28 @@ static void test_add_stopover() {
 	free_table_race(l_race);
 }
 
+static void test_is_circuit() {
+
+	Escale *l_firstStopover;
+	Escale *l_secondStopover;
+	Escale *l_thirdStopover;
+	Course *l_race;
+
+	l_firstStopover = create_stopover(18, 32, "Comblain-la_Tour"); /* @suppress("Avoid magic numbers") */
+	l_secondStopover = create_stopover(-90, 180, "Sart-Tilmant"); /* @suppress("Avoid magic numbers") */
+	l_thirdStopover = create_stopover(-40, 25, "Eupen"); /* @suppress("Avoid magic numbers") */
+	l_race = create_table_race(l_firstStopover, l_secondStopover);
+
+	add_table_stopover(&l_race, l_thirdStopover);
+	assert_int_equal(0, is_table_circuit(l_race));
+
+	add_table_stopover(&l_race, l_firstStopover);
+	assert_int_equal(1, is_table_circuit(l_race));
+
+	free_table_race(l_race);
+
+}
+
 static void test_race_time() {
 
 	Escale *l_firstStopover;
@@ -94,6 +117,7 @@ static void test_fixture() {
 
 	test_fixture_start();
 	run_test(test_add_stopover);
+	run_test(test_is_circuit);
 	run_test(test_race_time);
 	test_fixture_end();
 }
