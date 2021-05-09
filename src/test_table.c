@@ -47,7 +47,7 @@ static void test_add_stopover() {
 	l_stopover = obtain_table_stopover(l_race, 1);
 
 	assert_float_equal(get_latitude(l_secondStopover),
-			get_latitude(l_stopover), 0);
+			get_latitude(l_stopover),0);
 	assert_float_equal(get_longitude(l_secondStopover),
 			get_longitude(l_stopover), 0);
 
