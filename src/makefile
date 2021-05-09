@@ -30,8 +30,8 @@ course_tableau.o: course_tableau.c
 test_array: course_tableau_test.c
 	$(CC) -g -o course_tableau_test escale.c course_tableau.c seatest.c course_tableau_test.c $(CFLAGS)
 
-test_list: test_list.c
-	$(CC) -g -o test_list escale.c course_liste.c seatest.c course_liste_test.c $(CFLAGS)
+test_list: course_liste_test.c
+	$(CC) -g -o course_liste_test escale.c course_liste.c seatest.c course_liste_test.c $(CFLAGS)
 
 clean:
 	rm -f *.o $(TESTS_E) *~
