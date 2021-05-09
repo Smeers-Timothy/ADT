@@ -82,10 +82,6 @@ static void test_is_circuit() {
 
 	add_end(&l_race, l_firstStopover);
 	assert_int_equal(1, is_list_circuit(l_race));
-	assert_int_equal(3, get_list_stopover(l_race));
-
-	remove_list_stopover(&l_race, l_firstStopover);
-	assert_int_equal(2, get_list_stopover(l_race));
 
 	free_list_race(l_race);
 

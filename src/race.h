@@ -256,7 +256,7 @@ float stopover_race_time(Course *p_race, Escale *p_stopover);
  * @param p_race a pointer to the Course structure
  * @return float p_race->s_bestTime
  */
-float race_time(Course *p_race);
+float race_table_time(Course *p_race);
 
 /**
  * @fn float race_table_time(Course*)

@@ -58,11 +58,11 @@ static Course* right_shift(Course *p_race, unsigned int p_start) {
 
 	unsigned int l_step;
 
-	if (p_race->s_nbrStopover > 0)
-		l_step = p_race->s_nbrStopover - 1;
-
 	if (p_race->s_sizeBoard < p_race->s_nbrStopover)
 		p_race = memory_allocation(p_race);
+
+	if (p_race->s_nbrStopover > 0)
+		l_step = p_race->s_nbrStopover - 1;
 
 	for (unsigned int i = l_step; i >= p_start; i--)
 		p_race->s_stopover[i + 1] = p_race->s_stopover[i];
@@ -115,6 +115,8 @@ Course* create_table_race(Escale *p_stopover, Escale *p_secondStopover) {
 	l_race->s_sizeBoard = SIZE;
 
 	log_time(p_stopover, 0.0);
+
+	l_race->s_nbrStopover = 2;
 
 	l_race->s_stopover = malloc(sizeof(Escale*) * SIZE);
 
