@@ -12,8 +12,8 @@
  * l_	Les variables globale à une seule fonction
  */
 
-#ifndef STOPOVER_H_
-#define STOPOVER_H_
+#ifndef ESCALE_H_
+#define ESCALE_H_
 
 /**
  * @struct typedef struct Escale_t Escale
@@ -113,4 +113,4 @@ float get_longitude(Escale *p_stopover);
  */
 float get_best_time(Escale *p_stopover);
 
-#endif /* STOPOVER_H_ */
+#endif /* ESCALE_H_ */

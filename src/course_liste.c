@@ -16,8 +16,8 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#include "race.h"
-#include "stopover.h"
+#include "course.h"
+#include "escale.h"
 
 /* STRUCT */
 
@@ -186,7 +186,7 @@ void *add_list_stopover(Course **p_race, Escale *p_stopover, int p_position) { /
 
 		l_cell = *p_race;
 
-		for(unsigned int l_count = 2; l_count <= p_position && l_cell != NULL; l_count++)
+		for(l_count = 2; l_count <= p_position && l_cell != NULL; l_count++)
 			l_cell = l_cell->s_next_stopover;
 
 		if(l_cell != NULL) {

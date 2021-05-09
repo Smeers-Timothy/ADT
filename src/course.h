@@ -12,10 +12,10 @@
  * l_	Les variables globale à une seule fonction
  */
 
-#ifndef RACE_H_
-#define RACE_H_
+#ifndef COURSE_H_
+#define COURSE_H_
 
-#include "stopover.h"
+#include "escale.h"
 
 /**
  * @struct typedef struct Course_t Course
@@ -281,4 +281,4 @@ float race_list_time(Course *p_race);
  */
 float get_time(Course *p_race, int p_position);
 
-#endif /* RACE_H_ */
+#endif /* COURSE_H_ */

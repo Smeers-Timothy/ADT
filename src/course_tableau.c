@@ -15,8 +15,8 @@
 #include <stdlib.h>
 #include <assert.h>
 
-#include "race.h"
-#include "stopover.h"
+#include "course.h"
+#include "escale.h"
 
 /* DEFINE */
 
