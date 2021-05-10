@@ -3,8 +3,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
-\AddThinSpaceBeforeFootnotes 
-\FrenchFootnotes 
+\AddThinSpaceBeforeFootnotes
+\FrenchFootnotes
 \usepackage[scaled=.90]{helvet}
 \usepackage{mathptmx}
 \usepackage{array}
@@ -106,23 +106,23 @@ literate=
 %%%%%%%%%%%%%%%%%%%% FIN DE LA ZONE PROTÉGÉE %%%%%%%%%%%%%%%%%%%%
 
 \section{Spécifications des TAD}
-	
+
 	\subsection{Escale\_t}
 		\begin{tabular}{|p{17cm}|c}
 			\hline
 			\\
-			
+
 			\textbf{Types:}
 				\begin{itemize}
 					\item[] Escale
 				\end{itemize}
-			
+
 			\textbf{Utilise:}
 				\begin{itemize}
 					\item[] float
 					\item[] String
 				\end{itemize}
-			
+
 			\textbf{Opérations\footnotemark{}:}
 				\begin{itemize}
 					\item[] \textcolor{red}{create\_stopover}:\textcolor{green}{float} $\times$ \textcolor{green}{float} $\times$ \textcolor{green}{String} $\rightharpoonup$ \textcolor{blue}{Escale}
@@ -134,52 +134,52 @@ literate=
 					\item[] \textcolor{magenta}{get\_longitude}: \textcolor{green}{Escale} $\rightharpoonup$ \textcolor{blue}{float}
 					\item[] \textcolor{magenta}{get\_best\_time}: \textcolor{green}{Escale} $\rightharpoonup$ \textcolor{blue}{float}
 				\end{itemize}
-			
+
 			\textbf{Préconditions:}
 				\begin{itemize}
 					\item[$\bullet$] $\forall \hspace{1mm} x \in float, \hspace{1mm} x \in [-90,90] \hspace{2mm} \&\& \hspace{2mm} \forall \hspace{1mm} y \in float, \hspace{1mm} y \in [-180,180]  \hspace{2mm} \&\&$ \newline $\forall \hspace{1mm} name \neq \oslash \Rightarrow create\_stopover(x \hspace{1mm} , \hspace{1mm} y \hspace{1mm} , \hspace{1mm} *name)$
 					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \hspace{2mm} \&\& \hspace{2mm} \forall \hspace{1mm} time \geq 0 \Rightarrow log\_time(*x \hspace{1mm} , \hspace{1mm} time) $
-					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow free\_stopover(*x)$ 
+					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow free\_stopover(*x)$
 					\item[$\bullet$] $\forall \hspace{1mm} x, \hspace{1mm} y \in Escale \neq \oslash \Rightarrow calculate\_range(*x \hspace{1mm} , \hspace{1mm} *y)$
-					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow get\_name(*x)$ 
-					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow get\_latitude(*x)$ 
-					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow get\_longitude(*x)$ 
-					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow get\_best\_time(*x)$ 
+					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow get\_name(*x)$
+					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow get\_latitude(*x)$
+					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow get\_longitude(*x)$
+					\item[$\bullet$] $\forall \hspace{1mm} x \in Escale \neq \oslash \Rightarrow get\_best\_time(*x)$
 				\end{itemize}
-				
+
 			\textbf{Axiomes:}
 				\begin{itemize}
-					\item[$\bullet$] 
+					\item[$\bullet$]
 				\end{itemize}
-				
-			\\	
+
+			\\
 			\hline
 		\end{tabular}
-		 
-		\footnotetext{\textcolor{red}{Nom des opérations interne}} 
-		\footnotetext{\textcolor{green}{Arguments}} 
-		\footnotetext{\textcolor{blue}{Types de retour}} 
+
+		\footnotetext{\textcolor{red}{Nom des opérations interne}}
+		\footnotetext{\textcolor{green}{Arguments}}
+		\footnotetext{\textcolor{blue}{Types de retour}}
 		\footnotetext{\textcolor{magenta}{Nom des opérations d'observation}}
-		
-		
-	\subsection{Course\_t} 
+
+
+	\subsection{Course\_t}
 		\subsubsection{Tableau}
 			\begin{tabular}{|p{17cm}|c}
 				\hline
 				\\
-				
+
 				\textbf{Types:}
 					\begin{itemize}
 						\item[] Course
 					\end{itemize}
-				
+
 				\textbf{Utilise:}
 					\begin{itemize}
 						\item[] Escale
 						\item[] float
 						\item[] unsigned int
 					\end{itemize}
-				
+
 				\textbf{Opérations\footnotemark{}:}
 					\begin{itemize}
 						\item[] \textcolor{red}{memory\_allocation}:\textcolor{green}{Course} $\rightharpoonup$ \textcolor{blue}{Course}
@@ -196,7 +196,7 @@ literate=
 						\item[] \textcolor{magenta}{get\_step}: \textcolor{green}{Course} $\rightharpoonup$ \textcolor{blue}{unsigned int}
 						\item[] \textcolor{magenta}{get\_time}: \textcolor{green}{Course} $\times$ \textcolor{green}{int} $\rightharpoonup$ \textcolor{blue}{float}
 					\end{itemize}
-				
+
 				\textbf{Préconditions:}
 					\begin{itemize}
 						\item[$\bullet$] $\forall \hspace{1mm} x \in Course, \hspace{1mm}  \Rightarrow memory\_allocation(*x)$
@@ -213,38 +213,38 @@ literate=
 						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm} , \hspace{1mm} x \neq \oslash \Rightarrow get\_step(*x)$
 						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm} , \hspace{1mm} x \neq \oslash  \hspace{1mm} \&\& \hspace{1mm} \forall \hspace{1mm} y \in int \hspace{1mm} , \hspace{1mm} y \hspace{1mm} < \hspace{1mm} nbrStopover \Rightarrow get_time(*x, y)$
 					\end{itemize}
-					
+
 				\textbf{Axiomes:}
 					\begin{itemize}
 						\item[$\bullet$]
 					\end{itemize}
-					
-				\\	
+
+				\\
 				\hline
 			\end{tabular}
-		
-		\footnotetext{\textcolor{red}{Nom des opérations interne}} 
-		\footnotetext{\textcolor{green}{Arguments}} 
-		\footnotetext{\textcolor{blue}{Types de retour}} 
+
+		\footnotetext{\textcolor{red}{Nom des opérations interne}}
+		\footnotetext{\textcolor{green}{Arguments}}
+		\footnotetext{\textcolor{blue}{Types de retour}}
 		\footnotetext{\textcolor{magenta}{Nom des opérations d'observation}}
-		
+
 		\subsubsection{Liste chaînée}
 			\begin{tabular}{|p{17cm}|c}
 				\hline
 				\\
-				
+
 				\textbf{Types:}
 					\begin{itemize}
 						\item[] Cell
 					\end{itemize}
-				
+
 				\textbf{Utilise:}
 					\begin{itemize}
 						\item[] Escale
 						\item[] Cell
 						\item[] unsigned int
 					\end{itemize}
-				
+
 				\textbf{Opérations\footnotemark{}:}
 					\begin{itemize}
 						\item[] \textcolor{red}{create\_liste\_race}: \textcolor{green}{Escale} $\times$ \textcolor{green}{Escale} $\rightharpoonup$ \textcolor{blue}{Course}
@@ -260,47 +260,47 @@ literate=
 						\item[] \textcolor{red}{is\_list\_circuit}: \textcolor{green}{Course}$\rightharpoonup$ \textcolor{blue}{unsigned int}
 						\item[] \textcolor{magenta}{get\_list\_stopover}: \textcolor{green}{Course}$\rightharpoonup$ \textcolor{blue}{unsigned int}
 					\end{itemize}
-				
+
 				\textbf{Préconditions:}
 					\begin{itemize}
 						\item[$\bullet$] $\forall \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash \Rightarrow create\_list\_race(*x \hspace{1mm} , \hspace{1mm}*y)$
 						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  obtain\_list\_stopover(*x \hspace{1mm} , \hspace{1mm }*y)$
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  add\_start(**x \hspace{1mm} , \hspace{1mm} *y)$						
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  add\_end(**x \hspace{1mm} , \hspace{1mm} *y)$						
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  remove\_list\_stopover(**x \hspace{1mm} ,\hspace{1mm} *y)$	
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  print_race(*x)$	
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  free\_list\_race(*x)$	
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  add\_list\_stopover(**x \hspace{1mm} , \hspace{1mm} *y \hspace{1mm} , \hspace{1mm} position)$			
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  stopover\_race\_time(*x \hspace{1mm} , \hspace{1mm} *y)$			
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  race\_list\_time(*x)$	
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  is\_list\_circuit(*x)$	
-						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  get\_list\_stopover(*x)$	
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  add\_start(**x \hspace{1mm} , \hspace{1mm} *y)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  add\_end(**x \hspace{1mm} , \hspace{1mm} *y)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  remove\_list\_stopover(**x \hspace{1mm} ,\hspace{1mm} *y)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  print_race(*x)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  free\_list\_race(*x)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  add\_list\_stopover(**x \hspace{1mm} , \hspace{1mm} *y \hspace{1mm} , \hspace{1mm} position)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course \hspace{1mm},\hspace{1mm} \forall y \in Escale, \hspace{1mm} x \hspace{1mm} , \hspace{1mm} y  \neq \oslash  \Rightarrow  stopover\_race\_time(*x \hspace{1mm} , \hspace{1mm} *y)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  race\_list\_time(*x)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  is\_list\_circuit(*x)$
+						\item[$\bullet$] $\forall \hspace{1mm} x \in Course,\hspace{1mm} x \neq \oslash \Rightarrow  get\_list\_stopover(*x)$
 					\end{itemize}
-					
+
 				\textbf{Axiomes:}
 					\begin{itemize}
 						\item[$\bullet$]
 					\end{itemize}
-					
-				\\	
+
+				\\
 				\hline
 			\end{tabular}
-		
-		\footnotetext{\textcolor{red}{Nom des opérations interne}} 
-		\footnotetext{\textcolor{green}{Arguments}} 
-		\footnotetext{\textcolor{blue}{Types de retour}} 
+
+		\footnotetext{\textcolor{red}{Nom des opérations interne}}
+		\footnotetext{\textcolor{green}{Arguments}}
+		\footnotetext{\textcolor{blue}{Types de retour}}
 		\footnotetext{\textcolor{magenta}{Nom des opérations d'observation}}
-		
+
 	\newpage
-	
+
 \section{Déscriptions des TAD}
 
 	\subsection{Escale}
-	
+
 	Cette structure permettra d'implémenté le TAD Escale permettant de créer une escale avec les position géographique de chaque étapes,
 	et de stocker chaque étapes avec un nom.
 	L'escale comportera le meilleur temps pour la parcourir.
-	
+
 		\begin{lstlisting}
 struct Escale_t {
 	float s_latitude;
@@ -309,7 +309,7 @@ struct Escale_t {
 	char *s_name;
 };
 		\end{lstlisting}
-		
+
 		\begin{itemize}
 			\item[$\bullet$] float $s\_latitude;$
 			\begin{itemize}
@@ -328,14 +328,14 @@ struct Escale_t {
 				\item[] Permet de stocker le nom de chaque étapes.
 			\end{itemize}
 		\end{itemize}
-		
+
 	\subsection{Course}
-	
+
 		Cette structure permettra d'implémenté le TAD Course basée sur un tableau.
 	Cette structure comprendra un pointeur sur le TAD escale permettant d'obtenir ses variables.
 	Une taille du tableau qui dépendra du nombre d'escale.
 	Ces variables me permettrons de trouvé le meilleur temps d'une course.
-		
+
 		\begin{lstlisting}
 struct Course_t {
 	Escale **s_stopover;
@@ -344,7 +344,7 @@ struct Course_t {
 	unsigned int s_nbrStopover;
 };
 		\end{lstlisting}
-		
+
 		\begin{itemize}
 			\item[$\bullet$] Escale $**s\_stopover;$
 			\begin{itemize}
@@ -363,16 +363,16 @@ struct Course_t {
 				\item[] Permet de stocker le nombre d'escale présente dans la course.
 			\end{itemize}
 		\end{itemize}
-		
+
 	\newpage
-		
+
 	\subsection{Cell}
-	
-			Cette structure permettra d'implémenté le TAD Course basée sur un tableau. 
+
+			Cette structure permettra d'implémenté le TAD Course basée sur un tableau.
 		Cette structure comprendra un pointeur sur le TAD escale permettant d'obtenir ses variables.
 		Elle contient aussi un pointeur sur la structure Cell.
-		Une variable permettra de trouver le nombre d'escale.	
-	
+		Une variable permettra de trouver le nombre d'escale.
+
 		\begin{lstlisting}
 typedef Course Cell;
 
@@ -382,7 +382,7 @@ struct Course_t {
 	unsigned int s_nbrStopover;
 };
 		\end{lstlisting}
-		
+
 		\begin{itemize}
 			\item[$\bullet$] Escale $*s\_stopover;$
 			\begin{itemize}
@@ -397,11 +397,11 @@ struct Course_t {
 				\item[] Permet de stocker le nombre d'escale dans la course.
 			\end{itemize}
 		\end{itemize}
-		
+
 \section{Avantages et inconvénients}
 
 	\subsection{Escale}
-	
+
 		\begin{itemize}
 			\item[] Avantages
 			\begin{itemize}
@@ -409,10 +409,10 @@ struct Course_t {
 			\end{itemize}
 			\item[] Inconvénients
 			\begin{itemize}
-				\item[] 
+				\item[]
 			\end{itemize}
 		\end{itemize}
-		
+
 \section{Sous-problèmes}
 
 	\begin{itemize}
@@ -437,20 +437,20 @@ struct Course_t {
 			\item[-] Créé les tests pour le TAD sous forme de liste.
 		\end{itemize}
 	\end{itemize}
-	
+
 	\vspace{5mm}
-	
+
 	\begin{itemize}
 		\item[] $SP_1 \subset SP_2 \subset SP_4 \rightarrow SP_5$
 		\item[] $SP_2 \rightarrow SP_3$
 	\end{itemize}
-	
+
 \newpage
 
 \section{Spécification de fonctions}
 
 	\subsection{course\_liste.c}
-	
+
 % create_list_race %
 		\begin{lstlisting}
 /**
@@ -496,7 +496,7 @@ Escale* obtain_list_stopover(Course *p_race, Escale *p_stopover);
  */
 void* add_start(Course **p_race, Escale *p_stopover);
 		\end{lstlisting}
-		
+
 % add_end %
 		\begin{lstlisting}
 /**
@@ -524,7 +524,7 @@ void* add_end(Course **p_race, Escale *p_stopover);
  */
 void remove_list_stopover(Course **p_race, Escale *p_stopover);
 		\end{lstlisting}
-		
+
 % print_race %
 		\begin{lstlisting}
 /**
@@ -537,7 +537,7 @@ void remove_list_stopover(Course **p_race, Escale *p_stopover);
  */
 void print_race(Course *p_race);
 		\end{lstlisting}
-		
+
 % free_list_race %
 		\begin{lstlisting}
 /**
@@ -551,7 +551,7 @@ void print_race(Course *p_race);
 void free_list_race(Course *p_race);
 		\end{lstlisting}
 
-% add_list_stopover %		
+% add_list_stopover %
 		\begin{lstlisting}
 /**
  * @fn void add_list_stopover*(Course**, Escale*, int)
@@ -565,8 +565,8 @@ void free_list_race(Course *p_race);
  */
 void *add_list_stopover(Course **p_race, Escale *p_stopover, int p_position);
 		\end{lstlisting}
-	
-% stopover_race_time %			
+
+% stopover_race_time %
 		\begin{lstlisting}
 /**
  * @fn float stopover_race_time(Course*, Escale*)
@@ -581,9 +581,9 @@ void *add_list_stopover(Course **p_race, Escale *p_stopover, int p_position);
  */
 float stopover_race_time(Course *p_race, Escale *p_stopover);
 		\end{lstlisting}
-		
+
 \newpage
-% race_list_time %			
+% race_list_time %
 		\begin{lstlisting}
 /**
  * @fn float race_table_time(Course*)
@@ -596,8 +596,8 @@ float stopover_race_time(Course *p_race, Escale *p_stopover);
  */
 float race_list_time(Course *p_race);
 		\end{lstlisting}
-		
-% is_list_circuit %					
+
+% is_list_circuit %
 		\begin{lstlisting}
 /**
  * @fn unsigned int is_list_circuit(Course*)
@@ -611,8 +611,8 @@ float race_list_time(Course *p_race);
  */
 unsigned int is_list_circuit(Course *p_race);
 		\end{lstlisting}
-		
-% get_list_stopover %			
+
+% get_list_stopover %
 		\begin{lstlisting}
 /**
  * @fn unsigned int get_list_stopover(Course*)
@@ -625,12 +625,12 @@ unsigned int is_list_circuit(Course *p_race);
  */
 unsigned int get_list_stopover(Course *p_race);
 		\end{lstlisting}
-		
+
 	\newpage
-	
+
 	\subsection{course\_tableau.c}
-	
-% memory_allocation %			
+
+% memory_allocation %
 		\begin{lstlisting}
 /**
  * @fn Course memory_allocation*(Course*)
@@ -643,8 +643,8 @@ unsigned int get_list_stopover(Course *p_race);
  */
 static Course* memory_allocation(Course *p_race);
 		\end{lstlisting}
-		
-% right_shift %			
+
+% right_shift %
 		\begin{lstlisting}
 /**
  * @fn Course right_shift*(Course*, unsigned int)
@@ -658,13 +658,13 @@ static Course* memory_allocation(Course *p_race);
  */
 static Course* right_shift(Course *p_race, unsigned int p_start);
 		\end{lstlisting}
-		
-% left_shift %			
+
+% left_shift %
 		\begin{lstlisting}
 /**
  * @fn Course left_shift*(Course*, unsigned int)
  * @brief Allows you to shift a box in the table to the left
- * 
+ *
  * @pre p_race != NULL
  * @post p_race->s_sizeBoard < p_race->s_nbrStopover
  * @param p_race a pointer to the Course structure
@@ -673,8 +673,8 @@ static Course* right_shift(Course *p_race, unsigned int p_start);
  */
 static Course* left_shift(Course *p_race, unsigned int p_start);
 		\end{lstlisting}
-		
-%  create_table_race %			
+
+%  create_table_race %
 		\begin{lstlisting}
 /**
  * @fn Course create_table_race*(Escale*, Escale*)
@@ -689,10 +689,10 @@ static Course* left_shift(Course *p_race, unsigned int p_start);
  */
 Course* create_table_race(Escale *p_stopover, Escale *p_secondStopover);
 		\end{lstlisting}
-		
-\newpage 
 
-% add_table_stopover %			
+\newpage
+
+% add_table_stopover %
 		\begin{lstlisting}
 /**
  * @fn Course add_table_stopover*(Course*, Escale*, int)
@@ -708,8 +708,8 @@ Course* create_table_race(Escale *p_stopover, Escale *p_secondStopover);
  */
 Course* add_table_stopover(Course *p_race, Escale *p_stopover, int p_position);
 		\end{lstlisting}
-		
-% remove_table_stopover %			
+
+% remove_table_stopover %
 		\begin{lstlisting}
 /**
  * @fn Course remove_table_stopover*(Course*, int)
@@ -724,8 +724,8 @@ Course* add_table_stopover(Course *p_race, Escale *p_stopover, int p_position);
  */
 Course* remove_table_stopover(Course *p_race, int p_position);
 		\end{lstlisting}
-		
-% obtain_table_stopover %			
+
+% obtain_table_stopover %
 		\begin{lstlisting}
 /**
  * @fn Escale obtain_table_stopover*(Course*, int)
@@ -740,8 +740,8 @@ Course* remove_table_stopover(Course *p_race, int p_position);
  */
 Escale* obtain_table_stopover(Course *p_race, int p_position);
 		\end{lstlisting}
-		
-% free_table_race %			
+
+% free_table_race %
 		\begin{lstlisting}
 /**
  * @fn void free_table_race(Course*)
@@ -754,9 +754,9 @@ Escale* obtain_table_stopover(Course *p_race, int p_position);
 void free_table_race(Course *p_race);
 		\end{lstlisting}
 
-\newpage 
-		
-% is_table_circuit %			
+\newpage
+
+% is_table_circuit %
 		\begin{lstlisting}
 /**
  * @fn unsigned int is_table_circuit(Course*)
@@ -770,8 +770,8 @@ void free_table_race(Course *p_race);
  */
 unsigned int is_table_circuit(Course *p_race);
 		\end{lstlisting}
-		
-% race_table_time %			
+
+% race_table_time %
 		\begin{lstlisting}
 /**
  * @fn float race_table_time(Course*)
@@ -784,8 +784,8 @@ unsigned int is_table_circuit(Course *p_race);
  */
 float race_table_time(Course *p_race);
 		\end{lstlisting}
-		
-% get_table_stopover %			
+
+% get_table_stopover %
 		\begin{lstlisting}
 /**
  * @fn unsigned int get_table_stopover(Course*)
@@ -798,8 +798,8 @@ float race_table_time(Course *p_race);
  */
 unsigned int get_table_stopover(Course *p_race);
 		\end{lstlisting}
-		
-% get_step %			
+
+% get_step %
 		\begin{lstlisting}
 /**
  * @fn unsigned int get_step(Course*)
@@ -812,8 +812,8 @@ unsigned int get_table_stopover(Course *p_race);
  */
 unsigned int get_step(Course *p_race);
 		\end{lstlisting}
-		
-% get_time %			
+
+% get_time %
 		\begin{lstlisting}
 /**
  * @fn float get_time(Course*, int)
@@ -827,10 +827,9 @@ unsigned int get_step(Course *p_race);
  */
 float get_time(Course *p_race, int p_position);
 		\end{lstlisting}
-		
+
 % Section documentation
-\section{Documentation}	
+\section{Documentation}
 	Pour plus d'informations sur le code vous pouvez consulter le \href{doc/html/index.html}{site internet} contenant la documentation doxygen.
-\end{document}
-		
+
 \end{document}

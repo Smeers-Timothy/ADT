@@ -42,7 +42,7 @@ doc:
 .PHONY: doc
 
 rapport:
-		pdflatex rapport/tad-groupe34.tex
+		pdflatex rapport/tad-groupe34.tex 
 
 clean:
 	rm -f code/*.o $(TESTS_E) code/*~
