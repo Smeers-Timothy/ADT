@@ -20,7 +20,6 @@ static void test_add_stopover();
 static void test_race_time();
 static void test_fixture();
 static void all_tests();
-int test_table();
 
 static void test_add_stopover() {
 
@@ -103,8 +102,7 @@ static void all_tests() {
 	test_fixture();
 }
 
-int test_table() {
+int main() {
 
 	return (run_tests(all_tests));
 }
-
