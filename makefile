@@ -18,20 +18,20 @@ OBJECTS=escale.o course_liste.o
 
 all: $(EXEC)
 
-escale.o: src/escale.c
-	$(CC) -c src/escale.c -o escale.o $(CFLAGS)
+escale.o: code/escale.c
+	$(CC) -c code/escale.c -o escale.o $(CFLAGS)
 
-course_liste.o: src/course_liste.c
-	$(CC) -c src/course_liste.c -o course_liste.o $(CFLAGS)
+course_liste.o: code/course_liste.c
+	$(CC) -c code/course_liste.c -o course_liste.o $(CFLAGS)
 
-course_tableau.o: src/course_tableau.c
-	$(CC) -c src/course_tableau.c -o course_tableau.o $(CFLAGS)
+course_tableau.o: code/course_tableau.c
+	$(CC) -c code/course_tableau.c -o course_tableau.o $(CFLAGS)
 
-test_array: src/course_tableau_test.c
-	$(CC) -g -o course_tableau_test src/escale.c src/course_tableau.c src/seatest.c src/course_tableau_test.c $(CFLAGS)
+test_array: code/course_tableau_test.c
+	$(CC) -g -o course_tableau_test code/escale.c code/course_tableau.c code/seatest.c code/course_tableau_test.c $(CFLAGS)
 
-test_list: src/course_liste_test.c
-	$(CC) -g -o course_liste_test src/escale.c src/course_liste.c src/seatest.c src/course_liste_test.c $(CFLAGS)
+test_list: code/course_liste_test.c
+	$(CC) -g -o course_liste_test code/escale.c code/course_liste.c code/seatest.c code/course_liste_test.c $(CFLAGS)
 
 #documentation
 doc:

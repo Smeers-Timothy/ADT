@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Récursivité &amp; Types Abstraits de Données: Référence du fichier code/escale.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Récursivité &amp; Types Abstraits de Données
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">L&#39;objectif de ce travail est d&#39;implémenter, sous la forme d&#39;un type abstrait de données une course à étapes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('escale_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier escale.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="escale_8h_source.html">../code/escale.h</a>&quot;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;assert.h&gt;</code><br />
+</div>
+<p><a href="escale_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_escale__t.html">Escale_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ab208ebba81318f2e688b0beb0b21baad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escale_8c.html#ab208ebba81318f2e688b0beb0b21baad">calculate_range</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_secondStopover)</td></tr>
+<tr class="memdesc:ab208ebba81318f2e688b0beb0b21baad"><td class="mdescLeft">&#160;</td><td class="mdescRight">allows you to calculate the distance between two stopovers  <a href="escale_8c.html#ab208ebba81318f2e688b0beb0b21baad">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab208ebba81318f2e688b0beb0b21baad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a507cba46b1493ec693de65728adb0c6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escale_8c.html#a507cba46b1493ec693de65728adb0c6b">create_stopover</a> (float p_latitude, float p_longitude, char *p_name)</td></tr>
+<tr class="separator:a507cba46b1493ec693de65728adb0c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9bae91528649a103b5b88fcfd4dd2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escale_8c.html#a0a9bae91528649a103b5b88fcfd4dd2a">free_stopover</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="memdesc:a0a9bae91528649a103b5b88fcfd4dd2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">allows to free the memory allocated for the Escale structure  <a href="escale_8c.html#a0a9bae91528649a103b5b88fcfd4dd2a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0a9bae91528649a103b5b88fcfd4dd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16040ba743bfdf0d85e57eb683e94939"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escale_8c.html#a16040ba743bfdf0d85e57eb683e94939">get_best_time</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="memdesc:a16040ba743bfdf0d85e57eb683e94939"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the best time of the stopover  <a href="escale_8c.html#a16040ba743bfdf0d85e57eb683e94939">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a16040ba743bfdf0d85e57eb683e94939"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47ed7111a90b0647b15225d0e8465802"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escale_8c.html#a47ed7111a90b0647b15225d0e8465802">get_latitude</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="memdesc:a47ed7111a90b0647b15225d0e8465802"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the latitude of the stopover  <a href="escale_8c.html#a47ed7111a90b0647b15225d0e8465802">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a47ed7111a90b0647b15225d0e8465802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a166cb8e429d11ec84523c13925bc859c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escale_8c.html#a166cb8e429d11ec84523c13925bc859c">get_longitude</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="memdesc:a166cb8e429d11ec84523c13925bc859c"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the longitude of the stopover  <a href="escale_8c.html#a166cb8e429d11ec84523c13925bc859c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a166cb8e429d11ec84523c13925bc859c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94afe3144299d45acd71da333f7a44a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escale_8c.html#af94afe3144299d45acd71da333f7a44a">get_name</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="separator:af94afe3144299d45acd71da333f7a44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dede904859d79a2786e8b668593990a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="escale_8c.html#a6dede904859d79a2786e8b668593990a">log_time</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover, float p_time)</td></tr>
+<tr class="separator:a6dede904859d79a2786e8b668593990a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ab208ebba81318f2e688b0beb0b21baad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab208ebba81318f2e688b0beb0b21baad">&#9670;&nbsp;</a></span>calculate_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float calculate_range </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_secondStopover</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allows you to calculate the distance between two stopovers </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_stopover != NULL &amp;&amp; p_secondStopover != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stopover</td><td>A pointer to the Escale structure </td></tr>
+    <tr><td class="paramname">p_secondStopover</td><td>A pointer to the Escale structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>float l_range </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="escale_8c_source.html#l00074">74</a> du fichier <a class="el" href="escale_8c_source.html">escale.c</a>.</p>
+
+</div>
+</div>
+<a id="a507cba46b1493ec693de65728adb0c6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a507cba46b1493ec693de65728adb0c6b">&#9670;&nbsp;</a></span>create_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a>* create_stopover </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p_latitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p_longitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>p_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="escale_8c_source.html#l00034">34</a> du fichier <a class="el" href="escale_8c_source.html">escale.c</a>.</p>
+
+</div>
+</div>
+<a id="a0a9bae91528649a103b5b88fcfd4dd2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a9bae91528649a103b5b88fcfd4dd2a">&#9670;&nbsp;</a></span>free_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allows to free the memory allocated for the Escale structure </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_stopover != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>p_stopover is allowed </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stopover</td><td>A pointer to the Escale structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="escale_8c_source.html#l00067">67</a> du fichier <a class="el" href="escale_8c_source.html">escale.c</a>.</p>
+
+</div>
+</div>
+<a id="a16040ba743bfdf0d85e57eb683e94939"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16040ba743bfdf0d85e57eb683e94939">&#9670;&nbsp;</a></span>get_best_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float get_best_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getter for the best time of the stopover </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_stopover != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stopover</td><td>A pointer to the Escale structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>p_stopover-&gt;s_bestTime </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="escale_8c_source.html#l00105">105</a> du fichier <a class="el" href="escale_8c_source.html">escale.c</a>.</p>
+
+</div>
+</div>
+<a id="a47ed7111a90b0647b15225d0e8465802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47ed7111a90b0647b15225d0e8465802">&#9670;&nbsp;</a></span>get_latitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float get_latitude </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getter for the latitude of the stopover </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_stopover != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stopover</td><td>A pointer to the Escale structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>p_stopover-&gt;s_latitude </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="escale_8c_source.html#l00094">94</a> du fichier <a class="el" href="escale_8c_source.html">escale.c</a>.</p>
+
+</div>
+</div>
+<a id="a166cb8e429d11ec84523c13925bc859c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a166cb8e429d11ec84523c13925bc859c">&#9670;&nbsp;</a></span>get_longitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float get_longitude </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getter for the longitude of the stopover </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_stopover != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_stopover</td><td>A pointer to the Escale structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>p_stopover-&gt;s_longitude </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="escale_8c_source.html#l00099">99</a> du fichier <a class="el" href="escale_8c_source.html">escale.c</a>.</p>
+
+</div>
+</div>
+<a id="af94afe3144299d45acd71da333f7a44a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af94afe3144299d45acd71da333f7a44a">&#9670;&nbsp;</a></span>get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* get_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="escale_8c_source.html#l00088">88</a> du fichier <a class="el" href="escale_8c_source.html">escale.c</a>.</p>
+
+</div>
+</div>
+<a id="a6dede904859d79a2786e8b668593990a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dede904859d79a2786e8b668593990a">&#9670;&nbsp;</a></span>log_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a>* log_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>p_time</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="escale_8c_source.html#l00058">58</a> du fichier <a class="el" href="escale_8c_source.html">escale.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="escale_8c.html">escale.c</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

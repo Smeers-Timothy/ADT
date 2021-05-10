@@ -1,0 +1,892 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Récursivité &amp; Types Abstraits de Données: Référence du fichier code/course.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Récursivité &amp; Types Abstraits de Données
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+   <div id="projectbrief">L&#39;objectif de ce travail est d&#39;implémenter, sous la forme d&#39;un type abstrait de données une course à étapes.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('course_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier course.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="escale_8h_source.html">../code/escale.h</a>&quot;</code><br />
+</div>
+<p><a href="course_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:ac085f3efa4c75a280d6274782baaf59a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtypedef.html">typedef</a> struct <a class="el" href="struct_course__t.html">Course_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a></td></tr>
+<tr class="separator:ac085f3efa4c75a280d6274782baaf59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a699b4d97065ee8aebe27fbd1ee6ae8e3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a699b4d97065ee8aebe27fbd1ee6ae8e3">add_end</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> **p_race, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="separator:a699b4d97065ee8aebe27fbd1ee6ae8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae7a40ad47345e92329f875b84b7bdfe"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#aae7a40ad47345e92329f875b84b7bdfe">add_list_stopover</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> **p_race, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover, int p_position)</td></tr>
+<tr class="separator:aae7a40ad47345e92329f875b84b7bdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a409eb1e1b9aa5fe8df3da8432c712d7c"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a409eb1e1b9aa5fe8df3da8432c712d7c">add_start</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> **p_race, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="separator:a409eb1e1b9aa5fe8df3da8432c712d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5647cf6ba4c09f31d52f8efd7d458914"><td class="memItemLeft" align="right" valign="top"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a5647cf6ba4c09f31d52f8efd7d458914">add_table_stopover</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover, int p_position)</td></tr>
+<tr class="separator:a5647cf6ba4c09f31d52f8efd7d458914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada0b7e5f845449f79d6b7ca2d9922a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#aada0b7e5f845449f79d6b7ca2d9922a6">create_list_race</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_secondStopover)</td></tr>
+<tr class="separator:aada0b7e5f845449f79d6b7ca2d9922a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e55c427f4b3c9bd96df86d84138408"><td class="memItemLeft" align="right" valign="top"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a86e55c427f4b3c9bd96df86d84138408">create_table_race</a> (<a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_secondStopover)</td></tr>
+<tr class="separator:a86e55c427f4b3c9bd96df86d84138408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc65f2ccda929d1373f035a305be39a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#adc65f2ccda929d1373f035a305be39a7">free_list_race</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:adc65f2ccda929d1373f035a305be39a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to free the memory of the Course structure.  <a href="course_8h.html#adc65f2ccda929d1373f035a305be39a7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adc65f2ccda929d1373f035a305be39a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592a93ce28e00b228a6ccfada5294ba5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a592a93ce28e00b228a6ccfada5294ba5">free_table_race</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:a592a93ce28e00b228a6ccfada5294ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to free the memory of the Course structure.  <a href="course_8h.html#a592a93ce28e00b228a6ccfada5294ba5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a592a93ce28e00b228a6ccfada5294ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdcdb62127871bb90166699b09f3943a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#afdcdb62127871bb90166699b09f3943a">get_list_stopover</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:afdcdb62127871bb90166699b09f3943a"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of the number of stopover  <a href="course_8h.html#afdcdb62127871bb90166699b09f3943a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afdcdb62127871bb90166699b09f3943a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a1bd9bed64194fbc5bcbdd3d037724"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a16a1bd9bed64194fbc5bcbdd3d037724">get_step</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:a16a1bd9bed64194fbc5bcbdd3d037724"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of the number of step  <a href="course_8h.html#a16a1bd9bed64194fbc5bcbdd3d037724">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a16a1bd9bed64194fbc5bcbdd3d037724"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a484f2c2e2bf9b4327ea498d95c3bb363"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a484f2c2e2bf9b4327ea498d95c3bb363">get_table_stopover</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:a484f2c2e2bf9b4327ea498d95c3bb363"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of the number of stopover  <a href="course_8h.html#a484f2c2e2bf9b4327ea498d95c3bb363">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a484f2c2e2bf9b4327ea498d95c3bb363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14e85e777a66bd6afbdc76d639c8958"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#af14e85e777a66bd6afbdc76d639c8958">get_time</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race, int p_position)</td></tr>
+<tr class="separator:af14e85e777a66bd6afbdc76d639c8958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6c8772698f646a410b678dfd4280ee4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#ac6c8772698f646a410b678dfd4280ee4">is_list_circuit</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:ac6c8772698f646a410b678dfd4280ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to determine if the race is a circuit.  <a href="course_8h.html#ac6c8772698f646a410b678dfd4280ee4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac6c8772698f646a410b678dfd4280ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11eb02d4d307249e0a9b14912df0bab4"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a11eb02d4d307249e0a9b14912df0bab4">is_table_circuit</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:a11eb02d4d307249e0a9b14912df0bab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to determine if the race is a circuit.  <a href="course_8h.html#a11eb02d4d307249e0a9b14912df0bab4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a11eb02d4d307249e0a9b14912df0bab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4179c29d66c1bbe86141b21da8229f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#ad4179c29d66c1bbe86141b21da8229f8">obtain_list_stopover</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="separator:ad4179c29d66c1bbe86141b21da8229f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a1087bf916acf896ba88417e273980"><td class="memItemLeft" align="right" valign="top"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#ab7a1087bf916acf896ba88417e273980">obtain_table_stopover</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race, int p_position)</td></tr>
+<tr class="separator:ab7a1087bf916acf896ba88417e273980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2584b4cd10a6a3e739fdf4d507d77ed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a2584b4cd10a6a3e739fdf4d507d77ed8">print_race</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:a2584b4cd10a6a3e739fdf4d507d77ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows you to display the race in the console.  <a href="course_8h.html#a2584b4cd10a6a3e739fdf4d507d77ed8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2584b4cd10a6a3e739fdf4d507d77ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ace27b9e5c2c492bff1696baf9b553"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a04ace27b9e5c2c492bff1696baf9b553">race_list_time</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="separator:a04ace27b9e5c2c492bff1696baf9b553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44445cf6d41bd6acb65a77e425370d97"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a44445cf6d41bd6acb65a77e425370d97">race_table_time</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race)</td></tr>
+<tr class="memdesc:a44445cf6d41bd6acb65a77e425370d97"><td class="mdescLeft">&#160;</td><td class="mdescRight">get time to race  <a href="course_8h.html#a44445cf6d41bd6acb65a77e425370d97">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a44445cf6d41bd6acb65a77e425370d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a389cd305a3f6e6081b8cbfdb8a69297d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a389cd305a3f6e6081b8cbfdb8a69297d">remove_list_stopover</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> **p_race, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="memdesc:a389cd305a3f6e6081b8cbfdb8a69297d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows you to remove a stopover to the structure.  <a href="course_8h.html#a389cd305a3f6e6081b8cbfdb8a69297d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a389cd305a3f6e6081b8cbfdb8a69297d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee4286a25badf09b2f1b4afe28ef981"><td class="memItemLeft" align="right" valign="top"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a2ee4286a25badf09b2f1b4afe28ef981">remove_table_stopover</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race, int p_position)</td></tr>
+<tr class="separator:a2ee4286a25badf09b2f1b4afe28ef981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6651e9a10812f0c2e775a4d74da3dacf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="course_8h.html#a6651e9a10812f0c2e775a4d74da3dacf">stopover_race_time</a> (<a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *p_race, <a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *p_stopover)</td></tr>
+<tr class="memdesc:a6651e9a10812f0c2e775a4d74da3dacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">allows you to find the best time of the stage  <a href="course_8h.html#a6651e9a10812f0c2e775a4d74da3dacf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6651e9a10812f0c2e775a4d74da3dacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="ac085f3efa4c75a280d6274782baaf59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac085f3efa4c75a280d6274782baaf59a">&#9670;&nbsp;</a></span>Course</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtypedef.html">typedef</a> struct <a class="el" href="struct_course__t.html">Course_t</a> <a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course_8h_source.html#l00001">1</a> du fichier <a class="el" href="course_8h_source.html">course.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a699b4d97065ee8aebe27fbd1ee6ae8e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a699b4d97065ee8aebe27fbd1ee6ae8e3">&#9670;&nbsp;</a></span>add_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* add_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> **&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00082">82</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="aae7a40ad47345e92329f875b84b7bdfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae7a40ad47345e92329f875b84b7bdfe">&#9670;&nbsp;</a></span>add_list_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* add_list_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> **&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00170">170</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a409eb1e1b9aa5fe8df3da8432c712d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a409eb1e1b9aa5fe8df3da8432c712d7c">&#9670;&nbsp;</a></span>add_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* add_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> **&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00065">65</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a5647cf6ba4c09f31d52f8efd7d458914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5647cf6ba4c09f31d52f8efd7d458914">&#9670;&nbsp;</a></span>add_table_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a>* add_table_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00135">135</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="aada0b7e5f845449f79d6b7ca2d9922a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada0b7e5f845449f79d6b7ca2d9922a6">&#9670;&nbsp;</a></span>create_list_race()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a>* create_list_race </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_secondStopover</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00034">34</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a86e55c427f4b3c9bd96df86d84138408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e55c427f4b3c9bd96df86d84138408">&#9670;&nbsp;</a></span>create_table_race()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a>* create_table_race </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_secondStopover</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00089">89</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="adc65f2ccda929d1373f035a305be39a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc65f2ccda929d1373f035a305be39a7">&#9670;&nbsp;</a></span>free_list_race()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_list_race </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to free the memory of the Course structure. </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Course *p_race is released </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00158">158</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a592a93ce28e00b228a6ccfada5294ba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a592a93ce28e00b228a6ccfada5294ba5">&#9670;&nbsp;</a></span>free_table_race()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void free_table_race </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to free the memory of the Course structure. </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>Course *p_race is released </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00176">176</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="afdcdb62127871bb90166699b09f3943a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdcdb62127871bb90166699b09f3943a">&#9670;&nbsp;</a></span>get_list_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_list_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getter of the number of stopover </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>unsigned int p_race-&gt;s_nbrStopover </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00260">260</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a16a1bd9bed64194fbc5bcbdd3d037724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16a1bd9bed64194fbc5bcbdd3d037724">&#9670;&nbsp;</a></span>get_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_step </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getter of the number of step </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>unsigned int p_race-&gt;s_nbrStopover -1 </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00231">231</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="a484f2c2e2bf9b4327ea498d95c3bb363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a484f2c2e2bf9b4327ea498d95c3bb363">&#9670;&nbsp;</a></span>get_table_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int get_table_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getter of the number of stopover </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>unsigned int p_race-&gt;s_nbrStopover </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00223">223</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="af14e85e777a66bd6afbdc76d639c8958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af14e85e777a66bd6afbdc76d639c8958">&#9670;&nbsp;</a></span>get_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float get_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL &amp;&amp; p_position &lt; p_race-&gt;s_nbrStopover </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+    <tr><td class="paramname">p_position</td><td>the position in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>float l_time </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00242">242</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="ac6c8772698f646a410b678dfd4280ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c8772698f646a410b678dfd4280ee4">&#9670;&nbsp;</a></span>is_list_circuit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int is_list_circuit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to determine if the race is a circuit. </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 if the race is not a circuit 1 else </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00236">236</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a11eb02d4d307249e0a9b14912df0bab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11eb02d4d307249e0a9b14912df0bab4">&#9670;&nbsp;</a></span>is_table_circuit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int is_table_circuit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to determine if the race is a circuit. </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 if the race is not a circuit 1 else </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00186">186</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="ad4179c29d66c1bbe86141b21da8229f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4179c29d66c1bbe86141b21da8229f8">&#9670;&nbsp;</a></span>obtain_list_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a>* obtain_list_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00048">48</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="ab7a1087bf916acf896ba88417e273980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a1087bf916acf896ba88417e273980">&#9670;&nbsp;</a></span>obtain_table_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a>* obtain_table_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00166">166</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="a2584b4cd10a6a3e739fdf4d507d77ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2584b4cd10a6a3e739fdf4d507d77ed8">&#9670;&nbsp;</a></span>print_race()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_race </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows you to display the race in the console. </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00143">143</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a04ace27b9e5c2c492bff1696baf9b553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ace27b9e5c2c492bff1696baf9b553">&#9670;&nbsp;</a></span>race_list_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float race_list_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00220">220</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a44445cf6d41bd6acb65a77e425370d97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44445cf6d41bd6acb65a77e425370d97">&#9670;&nbsp;</a></span>race_table_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float race_table_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get time to race </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>p_race-&gt;s_bestTime0 != p_race-&gt;s_bestTime </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>float p_race-&gt;s_bestTime </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00210">210</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="a389cd305a3f6e6081b8cbfdb8a69297d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a389cd305a3f6e6081b8cbfdb8a69297d">&#9670;&nbsp;</a></span>remove_list_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_list_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> **&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allows you to remove a stopover to the structure. </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL &amp;&amp; p_stopover != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>a stopover has been removed </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+    <tr><td class="paramname">p_stopover</td><td>a pointer to the Escale structure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00112">112</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+<a id="a2ee4286a25badf09b2f1b4afe28ef981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee4286a25badf09b2f1b4afe28ef981">&#9670;&nbsp;</a></span>remove_table_stopover()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a>* remove_table_stopover </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>p_position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="course__tableau_8c_source.html#l00148">148</a> du fichier <a class="el" href="course__tableau_8c_source.html">course_tableau.c</a>.</p>
+
+</div>
+</div>
+<a id="a6651e9a10812f0c2e775a4d74da3dacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6651e9a10812f0c2e775a4d74da3dacf">&#9670;&nbsp;</a></span>stopover_race_time()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float stopover_race_time </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="course_8h.html#ac085f3efa4c75a280d6274782baaf59a">Course</a> *&#160;</td>
+          <td class="paramname"><em>p_race</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="escale_8h.html#a61c7437ab6c3508f7f930a198ccd6878">Escale</a> *&#160;</td>
+          <td class="paramname"><em>p_stopover</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>allows you to find the best time of the stage </p>
+<dl class="section pre"><dt>Précondition</dt><dd>p_race != NULL &amp;&amp; p_stopover != NULL </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>/ </dd></dl>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_race</td><td>a pointer to the Course structure </td></tr>
+    <tr><td class="paramname">p_stopover</td><td>pointer to the Escale structure </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>float l_time NULL on error </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="course__liste_8c_source.html#l00200">200</a> du fichier <a class="el" href="course__liste_8c_source.html">course_liste.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="course_8h.html">course.h</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>
