@@ -33,6 +33,7 @@ test_array: course_tableau_test.c
 test_list: course_liste_test.c
 	$(CC) -g -o course_liste_test escale.c course_liste.c seatest.c course_liste_test.c $(CFLAGS)
 
+<<<<<<< HEAD
 #documentation
 doc:
 	doxygen $(DOXYGEN_CONFIG)
@@ -47,3 +48,8 @@ clean:
 
 archive:
 	tar -zcvf tad-groupe34.tar.gz *.h *.c  makefile Images #Doxyfile
+=======
+clean:
+	rm -f *.o $(TESTS_E) *~
+	clear
+>>>>>>> c744a1b41be26ae9d545999f8cfc325403191a8f
