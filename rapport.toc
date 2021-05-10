@@ -1,4 +1,0 @@
-\babel@toc {french}{}
-\contentsline {section}{\numberline {1}Définition de TAD}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Course\_t}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Escale\_t}{3}{subsection.1.2}%
