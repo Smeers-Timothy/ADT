@@ -19,7 +19,6 @@
 #include <string.h>
 #include <assert.h>
 
-
 /* STRUCT */
 
 struct Escale_t {
@@ -35,7 +34,6 @@ Escale* create_stopover(float p_latitude, float p_longitude, char *p_name) {
 	assert(p_name != NULL);
 	assert(p_latitude <= 90 && p_latitude >= -90);
 	assert(p_longitude <= 180 && p_longitude >= -180);
-
 
 	Escale *l_stopover = malloc(sizeof(Escale));
 
@@ -76,9 +74,11 @@ float calculate_range(Escale *p_stopover, Escale *p_secondStopover) {
 	assert(p_secondStopover != NULL);
 
 	float l_range = acos(
-			sin(p_stopover->s_latitude) * sin(p_secondStopover->s_latitude)
-					+ cos(p_stopover->s_longitude)
-							* cos(p_secondStopover->s_longitude) * 1000);
+			sin(p_stopover->s_latitude)
+			* sin(p_secondStopover->s_latitude)
+			+ cos(p_stopover->s_longitude)
+			* cos(p_secondStopover->s_longitude)
+			* 1000);
 
 	return (l_range);
 }

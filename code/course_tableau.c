@@ -34,10 +34,39 @@ struct Course_t {
 
 /* STATIC FUNCTION */
 
+/**
+ * @fn Course memory_allocation*(Course*)
+ * @brief Allows memory to be reallocated for a race
+ *
+ * @pre p_race != NULL
+ * @post p_race memory0 < p_race memory
+ * @param p_race a pointer to the Course structure
+ * @return Course * a pointer to the header of the course structure
+ */
 static Course* memory_allocation(Course *p_race);
 
+/**
+ * @fn Course right_shift*(Course*, unsigned int)
+ * @brief Allows you to shift a box in the table to the right
+ *
+ * @pre p_race != NULL
+ * @post p_race->s_sizeBoard < p_race->s_nbrStopover
+ * @param p_race a pointer to the Course structure
+ * @param p_start the nth cell of the table to shift
+ * @return Course * a pointer to the header of the course structure
+ */
 static Course* right_shift(Course *p_race, unsigned int p_start);
 
+/**
+ * @fn Course left_shift*(Course*, unsigned int)
+ * @brief Allows you to shift a box in the table to the left
+ *
+ * @pre p_race != NULL
+ * @post p_race->s_sizeBoard < p_race->s_nbrStopover
+ * @param p_race a pointer to the Course structure
+ * @param p_start the nth cell of the table to shift
+ * @return Course * a pointer to the header of the course structure
+ */
 static Course* left_shift(Course *p_race, unsigned int p_start);
 
 static Course* memory_allocation(Course *p_race) {

@@ -21,7 +21,6 @@ static void test_is_circuit();
 static void test_race_time();
 static void test_fixture();
 static void all_tests();
-int main();
 
 static void test_add_stopover() {
 
