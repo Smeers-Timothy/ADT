@@ -47,6 +47,3 @@ clean:
 	rm -f course_tableau_test
 	rm -f course_liste_test
 	clear
-
-archive:
-	tar -zcvf tad-groupe34.tar.gz *.h *.c  makefile Images #Doxyfile
