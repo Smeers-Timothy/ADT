@@ -8,7 +8,7 @@ LDFLAGS=
 DOXYGEN_CONFIG=TAD.doxyfile
 
 # Files #
-EXEC=escale.o course_liste.o course_tableau.o
+EXEC=code/escale.o code/course_liste.o code/course_tableau.o
 TESTS=course_tableau_test test_list
 TESTS_E=course_tableau_test test_list
 MODULES=escale.c course_liste.c
@@ -28,10 +28,12 @@ course_tableau.o: code/course_tableau.c
 	$(CC) -c code/course_tableau.c -o course_tableau.o $(CFLAGS)
 
 test_array: code/course_tableau_test.c
-	$(CC) -g -o course_tableau_test code/escale.c code/course_tableau.c code/seatest.c code/course_tableau_test.c $(CFLAGS)
+	$(CC) -c code/course_tableau.c -o code/course_tableau.o $(CFLAGS)
+	ar rcs code/course_tableau_test.a code/course_tableau.o
 
 test_list: code/course_liste_test.c
-	$(CC) -g -o course_liste_test code/escale.c code/course_liste.c code/seatest.c code/course_liste_test.c $(CFLAGS)
+	$(CC) -c code/course_liste.c -o code/course_liste.o $(CFLAGS)
+	ar rcs code/course_liste_test.a code/course_liste.o
 
 #documentation
 doc:
@@ -43,10 +45,7 @@ rapport:
 		pdflatex rapport/tad-groupe34.tex
 
 clean:
-	rm -f *.o $(TESTS_E) *~
-	rm -f course_tableau_test
-	rm -f course_liste_test
+	rm -f code/*.o $(TESTS_E) code/*~
+	rm -f code/course_tableau_test.a
+	rm -f code/course_liste_test.a
 	clear
-
-archive:
-	tar -zcvf tad-groupe34.tar.gz *.h *.c  makefile Images #Doxyfile

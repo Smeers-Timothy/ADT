@@ -4,9 +4,9 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = "Récursivité & Types Abstraits de Données"
+PROJECT_NAME           = "Recursivite & Types Abstraits de Donnees"
 PROJECT_NUMBER         = 0.1
-PROJECT_BRIEF          = "L'objectif de ce travail est d'implémenter, sous la forme d'un type abstrait de données une course à étapes. "
+PROJECT_BRIEF          = "L'objectif de ce travail est d'implementer, sous la forme d'un type abstrait de donnees une course a etapes. "
 PROJECT_LOGO           = rapport/doc/logo.png
 OUTPUT_DIRECTORY       = ./rapport/doc
 CREATE_SUBDIRS         = NO

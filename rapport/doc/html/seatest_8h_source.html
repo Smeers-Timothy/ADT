@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Récursivité &amp; Types Abstraits de Données:  Fichier source de code/seatest.h</title>
+<title>Recursivite &amp; Types Abstraits de Donnees:  Fichier source de code/seatest.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,17 +26,17 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Récursivité &amp; Types Abstraits de Données
+   <div id="projectname">Recursivite &amp; Types Abstraits de Donnees
    &#160;<span id="projectnumber">0.1</span>
    </div>
-   <div id="projectbrief">L&#39;objectif de ce travail est d&#39;implémenter, sous la forme d&#39;un type abstrait de données une course à étapes.</div>
+   <div id="projectbrief">L&#39;objectif de ce travail est d&#39;implementer, sous la forme d&#39;un type abstrait de donnees une course a etapes.</div>
   </td>
  </tr>
  </tbody>
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.18 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
@@ -96,11 +96,11 @@ $(document).ready(function(){initNavTree('seatest_8h_source.html',''); initResiz
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">Defines</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define SEATEST_VERSION &quot;0.5&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="seatest_8h.html#aaca54d41854f3d449f60e0f42a105d50">   10</a></span>&#160;<span class="preprocessor">#define SEATEST_PROJECT_HOME &quot;http://code.google.com/p/seatest/&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="seatest_8h.html#aa785d78606df65f0cd3ffcf65572c65f">   11</a></span>&#160;<span class="preprocessor">#define SEATEST_PRINT_BUFFER_SIZE 100000</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="seatest_8h.html#a8e5b8ca5585d0ccdf3c0a5604a515304">   12</a></span>&#160;<span class="preprocessor">#define PRINTER_LENGHT 50</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="seatest_8h.html#a2e929b486ebabb8692957615a96fef1a">   13</a></span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="seatest_8h.html#aaca54d41854f3d449f60e0f42a105d50">    9</a></span>&#160;<span class="preprocessor">#define SEATEST_VERSION &quot;0.5&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="seatest_8h.html#aa785d78606df65f0cd3ffcf65572c65f">   10</a></span>&#160;<span class="preprocessor">#define SEATEST_PROJECT_HOME &quot;http://code.google.com/p/seatest/&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="seatest_8h.html#a8e5b8ca5585d0ccdf3c0a5604a515304">   11</a></span>&#160;<span class="preprocessor">#define SEATEST_PRINT_BUFFER_SIZE 100000</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="seatest_8h.html#a2e929b486ebabb8692957615a96fef1a">   12</a></span>&#160;<span class="preprocessor">#define PRINTER_LENGHT 50</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">Declarations</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">*/</span></div>
@@ -130,33 +130,33 @@ $(document).ready(function(){initNavTree('seatest_8h_source.html',''); initResiz
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">Assert Macros</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define assert_true(test) do { seatest_assert_true(test, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="seatest_8h.html#aeb81582fb05617c35135d67880a52607">   44</a></span>&#160;<span class="preprocessor">#define assert_false(test) do {  seatest_assert_false(test, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="seatest_8h.html#a2f5f61bcf79fe291cf024025982d4895">   45</a></span>&#160;<span class="preprocessor">#define assert_int_equal(expected, actual) do {  seatest_assert_int_equal(expected, actual, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="seatest_8h.html#abfe132dfbad82348dfbc6d8e169dd3d6">   46</a></span>&#160;<span class="preprocessor">#define assert_ulong_equal(expected, actual) do {  seatest_assert_ulong_equal(expected, actual, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="seatest_8h.html#a3645613507422afbe5474cc85286ff2f">   47</a></span>&#160;<span class="preprocessor">#define assert_string_equal(expected, actual) do {  seatest_assert_string_equal(expected, actual, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="seatest_8h.html#ac024d74082bcd1d6cb97d69b41b6ec6b">   48</a></span>&#160;<span class="preprocessor">#define assert_n_array_equal(expected, actual, n) do { int seatest_count; for(seatest_count=0; seatest_count&lt;n; seatest_count++) { char s_seatest[SEATEST_PRINT_BUFFER_SIZE]; sprintf(s_seatest,&quot;Expected %d to be %d at position %d&quot;, actual[seatest_count], expected[seatest_count], seatest_count); seatest_simple_test_result((expected[seatest_count] == actual[seatest_count]), s_seatest, __func__, __LINE__);} } while (0)</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="seatest_8h.html#a147a158979be818298d89d4f0534241f">   49</a></span>&#160;<span class="preprocessor">#define assert_bit_set(bit_number, value) { seatest_simple_test_result(((1 &lt;&lt; bit_number) &amp; value), &quot; Expected bit to be set&quot; ,  __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="seatest_8h.html#a1df17ff382a95b0c830c4ebd6939d5de">   50</a></span>&#160;<span class="preprocessor">#define assert_bit_not_set(bit_number, value) { seatest_simple_test_result(!((1 &lt;&lt; bit_number) &amp; value), &quot; Expected bit not to to be set&quot; ,  __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="seatest_8h.html#a091c9331227a650f21defe66cdb9aa5c">   51</a></span>&#160;<span class="preprocessor">#define assert_bit_mask_matches(value, mask) { seatest_simple_test_result(((value &amp; mask) == mask), &quot; Expected all bits of mask to be set&quot; ,  __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="seatest_8h.html#a747f0312bb705b6a6d72a8a78a54dfe7">   52</a></span>&#160;<span class="preprocessor">#define assert_fail(message) { seatest_simple_test_result(0, message,  __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="seatest_8h.html#aedecc4641cd3e2810407907ccb731a9a">   53</a></span>&#160;<span class="preprocessor">#define assert_float_equal(expected, actual, delta) do {  seatest_assert_float_equal(expected, actual, delta, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="seatest_8h.html#a9fa28fa08935cf80ab5b79aa2d00a7fb">   54</a></span>&#160;<span class="preprocessor">#define assert_double_equal(expected, actual, delta) do {  seatest_assert_double_equal(expected, actual, delta, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="seatest_8h.html#aed24737363b2273de17d027f5437efd6">   55</a></span>&#160;<span class="preprocessor">#define assert_string_contains(expected, actual) do {  seatest_assert_string_contains(expected, actual, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="seatest_8h.html#a24558b4f86f0df78056b1bb6b0675c60">   56</a></span>&#160;<span class="preprocessor">#define assert_string_doesnt_contain(expected, actual) do {  seatest_assert_string_doesnt_contain(expected, actual, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="seatest_8h.html#a37a1dad0b48f356026f2e3befa53d008">   57</a></span>&#160;<span class="preprocessor">#define assert_string_starts_with(expected, actual) do {  seatest_assert_string_starts_with(expected, actual, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="seatest_8h.html#a73423982c564ff60670ac8b3aa7d3a37">   58</a></span>&#160;<span class="preprocessor">#define assert_string_ends_with(expected, actual) do {  seatest_assert_string_ends_with(expected, actual, __func__, __LINE__); } while (0)</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="seatest_8h.html#ae746a4afa6cad8cdf154823c3eb7ec79">   59</a></span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="seatest_8h.html#aeb81582fb05617c35135d67880a52607">   43</a></span>&#160;<span class="preprocessor">#define assert_true(test) do { seatest_assert_true(test, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="seatest_8h.html#a2f5f61bcf79fe291cf024025982d4895">   44</a></span>&#160;<span class="preprocessor">#define assert_false(test) do {  seatest_assert_false(test, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="seatest_8h.html#abfe132dfbad82348dfbc6d8e169dd3d6">   45</a></span>&#160;<span class="preprocessor">#define assert_int_equal(expected, actual) do {  seatest_assert_int_equal(expected, actual, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="seatest_8h.html#a3645613507422afbe5474cc85286ff2f">   46</a></span>&#160;<span class="preprocessor">#define assert_ulong_equal(expected, actual) do {  seatest_assert_ulong_equal(expected, actual, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="seatest_8h.html#ac024d74082bcd1d6cb97d69b41b6ec6b">   47</a></span>&#160;<span class="preprocessor">#define assert_string_equal(expected, actual) do {  seatest_assert_string_equal(expected, actual, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="seatest_8h.html#a147a158979be818298d89d4f0534241f">   48</a></span>&#160;<span class="preprocessor">#define assert_n_array_equal(expected, actual, n) do { int seatest_count; for(seatest_count=0; seatest_count&lt;n; seatest_count++) { char s_seatest[SEATEST_PRINT_BUFFER_SIZE]; sprintf(s_seatest,&quot;Expected %d to be %d at position %d&quot;, actual[seatest_count], expected[seatest_count], seatest_count); seatest_simple_test_result((expected[seatest_count] == actual[seatest_count]), s_seatest, __func__, __LINE__);} } while (0)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="seatest_8h.html#a1df17ff382a95b0c830c4ebd6939d5de">   49</a></span>&#160;<span class="preprocessor">#define assert_bit_set(bit_number, value) { seatest_simple_test_result(((1 &lt;&lt; bit_number) &amp; value), &quot; Expected bit to be set&quot; ,  __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="seatest_8h.html#a091c9331227a650f21defe66cdb9aa5c">   50</a></span>&#160;<span class="preprocessor">#define assert_bit_not_set(bit_number, value) { seatest_simple_test_result(!((1 &lt;&lt; bit_number) &amp; value), &quot; Expected bit not to to be set&quot; ,  __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="seatest_8h.html#a747f0312bb705b6a6d72a8a78a54dfe7">   51</a></span>&#160;<span class="preprocessor">#define assert_bit_mask_matches(value, mask) { seatest_simple_test_result(((value &amp; mask) == mask), &quot; Expected all bits of mask to be set&quot; ,  __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="seatest_8h.html#aedecc4641cd3e2810407907ccb731a9a">   52</a></span>&#160;<span class="preprocessor">#define assert_fail(message) { seatest_simple_test_result(0, message,  __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="seatest_8h.html#a9fa28fa08935cf80ab5b79aa2d00a7fb">   53</a></span>&#160;<span class="preprocessor">#define assert_float_equal(expected, actual, delta) do {  seatest_assert_float_equal(expected, actual, delta, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="seatest_8h.html#aed24737363b2273de17d027f5437efd6">   54</a></span>&#160;<span class="preprocessor">#define assert_double_equal(expected, actual, delta) do {  seatest_assert_double_equal(expected, actual, delta, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="seatest_8h.html#a24558b4f86f0df78056b1bb6b0675c60">   55</a></span>&#160;<span class="preprocessor">#define assert_string_contains(expected, actual) do {  seatest_assert_string_contains(expected, actual, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="seatest_8h.html#a37a1dad0b48f356026f2e3befa53d008">   56</a></span>&#160;<span class="preprocessor">#define assert_string_doesnt_contain(expected, actual) do {  seatest_assert_string_doesnt_contain(expected, actual, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="seatest_8h.html#a73423982c564ff60670ac8b3aa7d3a37">   57</a></span>&#160;<span class="preprocessor">#define assert_string_starts_with(expected, actual) do {  seatest_assert_string_starts_with(expected, actual, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="seatest_8h.html#ae746a4afa6cad8cdf154823c3eb7ec79">   58</a></span>&#160;<span class="preprocessor">#define assert_string_ends_with(expected, actual) do {  seatest_assert_string_ends_with(expected, actual, __func__, __LINE__); } while (0)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">Fixture / Test Management</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keywordtype">void</span> <a class="code" href="seatest_8h.html#a682f814529a238f53afbfb528f0b8654">fixture_setup</a>(<span class="keywordtype">void</span> (*setup)( <span class="keywordtype">void</span> ));</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="seatest_8h.html#a1e4eb4121eb6544020718899c984a914">fixture_teardown</a>(<span class="keywordtype">void</span> (*teardown)( <span class="keywordtype">void</span> ));</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#define run_test(test) do { if(seatest_should_run(__FILE__, #test)) {seatest_suite_setup(); seatest_setup(); test(); seatest_teardown(); seatest_suite_teardown(); seatest_run_test();  }} while (0)</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="seatest_8h.html#a9a349403cd1a1b1689228b3500f9132b">   67</a></span>&#160;<span class="preprocessor">#define test_fixture_start() do { seatest_test_fixture_start(__FILE__); } while (0)</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="seatest_8h.html#ac04199b841fc7d0e75dedcc00a1f2615">   68</a></span>&#160;<span class="preprocessor">#define test_fixture_end() do { seatest_test_fixture_end();} while (0)</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="seatest_8h.html#a8dfe11a0d4961d1dbb6bcd44cb43561e">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="seatest_8h.html#a10642ef4142b117e028d1598cfe95cbb">fixture_filter</a>(<span class="keywordtype">char</span>* filter);</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="seatest_8h.html#a9a349403cd1a1b1689228b3500f9132b">   66</a></span>&#160;<span class="preprocessor">#define run_test(test) do { if(seatest_should_run(__FILE__, #test)) {seatest_suite_setup(); seatest_setup(); test(); seatest_teardown(); seatest_suite_teardown(); seatest_run_test();  }} while (0)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="seatest_8h.html#ac04199b841fc7d0e75dedcc00a1f2615">   67</a></span>&#160;<span class="preprocessor">#define test_fixture_start() do { seatest_test_fixture_start(__FILE__); } while (0)</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="seatest_8h.html#a8dfe11a0d4961d1dbb6bcd44cb43561e">   68</a></span>&#160;<span class="preprocessor">#define test_fixture_end() do { seatest_test_fixture_end();} while (0)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span> <a class="code" href="seatest_8h.html#a10642ef4142b117e028d1598cfe95cbb">fixture_filter</a>(<span class="keywordtype">char</span>* filter);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keywordtype">void</span> <a class="code" href="seatest_8h.html#a5f4807eba673af73e63d699b362dec42">test_filter</a>(<span class="keywordtype">char</span>* filter);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">int</span> <a class="code" href="seatest_8h.html#af23b45b97a93f81bd1ae82b0b1465ea8">run_tests</a>(<span class="keywordtype">void</span> (*tests)(<span class="keywordtype">void</span>));</div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('seatest_8h_source.html',''); initResiz
     <li class="navelem"><a class="el" href="dir_050edd66366d13764f98250ef6db77f6.html">code</a></li><li class="navelem"><a class="el" href="seatest_8h.html">seatest.h</a></li>
     <li class="footer">Généré par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
   </ul>
 </div>
 </body>
